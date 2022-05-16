@@ -2,7 +2,7 @@ const Sequelize = require('sequelize');
 const config = require('./../config');
 
 const Food = config.define('Foods', {
-    id: {
+    food_id: {
         type: Sequelize.INTEGER,
         autoIncrement: true,
         allowNull: false,

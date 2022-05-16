@@ -19,13 +19,26 @@ KEVIN'S BRANCH
 
 */
 
-Category.hasMany(Food, {
-    foreignKey: 'category_id'
-})
-Food.belongsTo(Category,{
-    foreignKey: 'category_id'
-})
+//Foreign Keys
 
+        //Food FK
+    Category.hasMany(Food, {
+        foreignKey: 'category_id'
+    })
+    Food.belongsTo(Category,{
+        foreignKey: 'category_id'
+    })
+
+    //Drinks FK
+    Category.hasMany(Food, {
+        foreignKey: 'category_id'
+    })
+    Drink.belongsTo(Category,{
+        foreignKey: 'category_id'
+    })
+
+
+    
 
 
 
@@ -79,11 +92,11 @@ app.delete('/category/:category_id', function(req, res){
 /////////////////////////// FOOD //////////////////////////////
 // GET : This get the list of all food
 app.get('/food', function(req, res){
-    let data = {
+    let fooddata = {
         where: {},
         include: Category
     }
-    Food.findAll(data).then(function(result){
+    Food.findAll(fooddata).then(function(result){
         res.status(200).send(result);
     }).catch(function(err){
         res.status(500).send(err);
@@ -123,7 +136,13 @@ app.delete('/food/:food_id', function(req, res){
 /////////////////////////// DRINK //////////////////////////////
 // GET : This get the list of all drink
 app.get('/drink', function(req, res){
-    Drink.findAll().then(function(result){
+
+    let drinkdata = {
+        where: {},
+        include: Category
+    }
+    
+    Drink.findAll(drinkdata).then(function(result){
         res.status(200).send(result);
     }).catch(function(err){
         res.status(500).send(err);
