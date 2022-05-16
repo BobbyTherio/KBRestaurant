@@ -6,22 +6,28 @@ const Category = require('./Models/Category');
 const Drink = require('./Models/Drink');
 const Food = require('./Models/Food');
 const Promo = require('./Models/Promo');
+const Sequelize = require('sequelize');
+
 
 app.use(cors());
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 
-/* Food.belongsTo(Category, {
-    foreignKey: "category_id"
-});
 
-Drink.belongsTo(Category, {
-    foreignKey: "category_id"
-});
+/*
+KEVIN'S BRANCH
 
-Category.hasMany(Food, Drink, {
-    foreignKey: "category_id"
-}); */
+*/
+
+Category.hasMany(Food, {
+    foreignKey: 'category_id'
+})
+Food.belongsTo(Category,{
+    foreignKey: 'category_id'
+})
+
+
+
 
 //This is the connection to the MySQL Database
 config.authenticate().then(function(){
@@ -73,7 +79,11 @@ app.delete('/category/:category_id', function(req, res){
 /////////////////////////// FOOD //////////////////////////////
 // GET : This get the list of all food
 app.get('/food', function(req, res){
-    Food.findAll().then(function(result){
+    let data = {
+        where: {},
+        include: Category
+    }
+    Food.findAll(data).then(function(result){
         res.status(200).send(result);
     }).catch(function(err){
         res.status(500).send(err);

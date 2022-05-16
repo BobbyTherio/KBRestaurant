@@ -2,7 +2,7 @@ const Sequelize = require('sequelize');
 const config = require('./../config');
 
 const Food = config.define('Foods', {
-    food_id: {
+    id: {
         type: Sequelize.INTEGER,
         autoIncrement: true,
         allowNull: false,
@@ -24,6 +24,7 @@ const Food = config.define('Foods', {
         type: Sequelize.INTEGER,
         allowNull: false
     },
+    
     ingredients: {
         type: Sequelize.STRING,
         allowNull: true

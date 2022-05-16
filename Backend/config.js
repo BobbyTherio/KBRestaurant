@@ -3,4 +3,4 @@ const config = new Sequelize("kbrestaurant", "root", "password", {dialect: 'mysq
 
 module.exports = config;
 
-//test
+
