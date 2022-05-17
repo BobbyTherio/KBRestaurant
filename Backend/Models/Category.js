@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 const config = require('./../config');
 
-const Category = config.define('Categories', {
+const Category = config.define('categories', {
     category_id: {
         type: Sequelize.INTEGER,
         autoIncrement: true,
