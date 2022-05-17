@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 const config = require('./../config');
 
-const Promo = config.define('Promos', {
+const Promo = config.define('promos', {
     promo_id: {
         type: Sequelize.INTEGER,
         autoIncrement: true,
