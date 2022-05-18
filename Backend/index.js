@@ -50,7 +50,7 @@ app.use(cors());
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 
-///////////////////////// FOREIGN KEYS ////////////////////////////
+///////////////////////// FOREIGN KEYS /////////////////////////////
 // Food FK
     Category.hasMany(Food, {
         foreignKey: 'category_id'
@@ -67,7 +67,7 @@ app.use(express.json());
         foreignKey: 'category_id'
     })
 
-/////////////////////////// CATEGORY //////////////////////////////
+/////////////////////////// CATEGORY ///////////////////////////////
 // GET : This get the list of all category
 app.get('/category', function(req, res){
     Category.findAll().then(function(result){
