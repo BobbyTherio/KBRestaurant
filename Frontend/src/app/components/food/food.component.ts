@@ -10,11 +10,7 @@ import { FoodService } from 'src/app/services/food.service';
 export class FoodComponent implements OnInit {
 
 
-@Input() food!: KBFood;
-
-constructor() { }
-
-/*    food!:KBFood[];
+   food!:KBFood[];
 
   constructor(private foodService:FoodService) {
     foodService.getFoods().subscribe((results) => {
@@ -22,7 +18,7 @@ constructor() { }
     }, (err) => {
       console.log(err);
     });
-   }  */
+   }  
 
   ngOnInit(): void {
   }

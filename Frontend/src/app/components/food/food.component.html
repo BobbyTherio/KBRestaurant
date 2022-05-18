@@ -1,24 +1,3 @@
-<!-- <div class="card">
-
-    <div class="card-header bg-dark text-white">
-        <h4 class="card-title">{{ food.name }}</h4>
-    </div>
-
-    <div class="card-body bg-dark text-white">
-        <p>{{ food.description }}</p>
-        <hr>
-        <p>{{ food.price }}</p>
-        <hr>
-        <p>{{ food.category_id }}</p>
-        <hr>
-        <p>{{ food.ingredients }}</p>       
-    </div>
-
-</div> -->
-
-
-<div><p>{{ food.name }}</p></div>
-
-<!-- <div *ngFor="let f of food">
-    <app-food [food]="f"></app-food>
-</div> -->
+<div *ngFor="let f of food">
+    <app-fooditem [fooditem]="f"></app-fooditem>
+</div>
