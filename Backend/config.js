@@ -1,8 +1,8 @@
 const Sequelize = require('sequelize');
-
-const config = new Sequelize('kbrestaurant', 'bobby', '=o@i<Z-x1)ox#r$+', {
+const config = new Sequelize("kbrestaurant", "kevin", "Myz'2S|V5dP$/8=T", {
     host: '34.83.241.31',
-    dialect: 'mysql',
-});
+    dialect: 'mysql'});
 
 module.exports = config;
+
+
