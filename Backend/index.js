@@ -122,12 +122,10 @@ app.delete('/food/:food_id', function(req, res){
 /////////////////////////// DRINK //////////////////////////////
 // GET : This get the list of all drink
 app.get('/drink', function(req, res){
-
     let drinkdata = {
         where: {},
         include: Category
     }
-    
     Drink.findAll(drinkdata).then(function(result){
         res.status(200).send(result);
     }).catch(function(err){

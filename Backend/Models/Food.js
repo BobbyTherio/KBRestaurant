@@ -24,7 +24,6 @@ const Food = config.define('foods', {
         type: Sequelize.INTEGER,
         allowNull: false
     },
-    
     ingredients: {
         type: Sequelize.STRING,
         allowNull: true

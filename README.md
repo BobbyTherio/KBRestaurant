@@ -5,7 +5,7 @@ This is the KBRestaurant, created by Bobby and Kevin for the Final Capstone Proj
 > Backend updated and completed
 
 18/05/22
-_Starting frontend_
+> Starting frontend
 
 | Date          | Update           | Completed  |
 | ------------- |:----------------:|-----------:|
@@ -17,7 +17,8 @@ _Starting frontend_
 
 
 GitHub README Markdown Cheatsheet
-[https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet]
+> https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
 
 GitHub Commands Cheatsheet
-[https://github.com/joshnh/Git-Commands]
+> https://github.com/joshnh/Git-Commands
+
