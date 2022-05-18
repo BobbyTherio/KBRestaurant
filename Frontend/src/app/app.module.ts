@@ -11,6 +11,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FooditemComponent } from './components/fooditem/fooditem.component';
 import { DrinksComponent } from './components/drinks/drinks.component';
+import { CategoriesComponent } from './components/categories/categories.component';
+import { CategoryComponent } from './components/category/category.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { DrinksComponent } from './components/drinks/drinks.component';
     DrinkComponent,
     OfferComponent,
     FooditemComponent,
-    DrinksComponent
+    DrinksComponent,
+    CategoriesComponent,
+    CategoryComponent
   ],
   imports: [
     BrowserModule,
