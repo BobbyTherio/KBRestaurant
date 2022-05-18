@@ -10,6 +10,7 @@ import { OfferComponent } from './components/offer/offer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FooditemComponent } from './components/fooditem/fooditem.component';
+import { DrinksComponent } from './components/drinks/drinks.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { FooditemComponent } from './components/fooditem/fooditem.component';
     FoodComponent,
     DrinkComponent,
     OfferComponent,
-    FooditemComponent
+    FooditemComponent,
+    DrinksComponent
   ],
   imports: [
     BrowserModule,
