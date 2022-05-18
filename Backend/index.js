@@ -78,7 +78,11 @@ app.delete('/category/:category_id', function(req, res){
 /////////////////////////// FOOD //////////////////////////////
 // GET : This get the list of all food
 app.get('/food', function(req, res){
-    Food.findAll().then(function(result){
+    let fooddata = {
+        where: {},
+        include: Category
+    }
+    Food.findAll(fooddata).then(function(result){
         res.status(200).send(result);
     }).catch(function(err){
         res.status(500).send(err);
@@ -118,7 +122,11 @@ app.delete('/food/:food_id', function(req, res){
 /////////////////////////// DRINK //////////////////////////////
 // GET : This get the list of all drink
 app.get('/drink', function(req, res){
-    Drink.findAll().then(function(result){
+    let drinkdata = {
+        where: {},
+        include: Category
+    }
+    Drink.findAll(drinkdata).then(function(result){
         res.status(200).send(result);
     }).catch(function(err){
         res.status(500).send(err);

@@ -5,7 +5,7 @@ This is the KBRestaurant, created by Bobby and Kevin for the Final Capstone Proj
 > Backend updated and completed
 
 18/05/22
-_Starting frontend_
+> Starting frontend
 
 | Date          | Update           | Completed  |
 | ------------- |:----------------:|-----------:|
