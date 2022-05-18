@@ -7,7 +7,7 @@ const Drink = require('./Models/Drink');
 const Food = require('./Models/Food');
 const Promo = require('./Models/Promo');
 
-// This is the connection to the MySQL Database
+//This is the connection to the MySQL Database
 config.authenticate().then(function(){
     console.log('Database is Running and Connected...');
 }).catch(function(err){
@@ -78,7 +78,11 @@ app.delete('/category/:category_id', function(req, res){
 /////////////////////////// FOOD //////////////////////////////
 // GET : This get the list of all food
 app.get('/food', function(req, res){
-    Food.findAll().then(function(result){
+    let fooddata = {
+        where: {},
+        include: Category
+    }
+    Food.findAll(fooddata).then(function(result){
         res.status(200).send(result);
     }).catch(function(err){
         res.status(500).send(err);
@@ -118,7 +122,11 @@ app.delete('/food/:food_id', function(req, res){
 /////////////////////////// DRINK //////////////////////////////
 // GET : This get the list of all drink
 app.get('/drink', function(req, res){
-    Drink.findAll().then(function(result){
+    let drinkdata = {
+        where: {},
+        include: Category
+    }
+    Drink.findAll(drinkdata).then(function(result){
         res.status(200).send(result);
     }).catch(function(err){
         res.status(500).send(err);
