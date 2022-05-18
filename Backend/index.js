@@ -6,10 +6,9 @@ const Category = require('./Models/Category');
 const Drink = require('./Models/Drink');
 const Food = require('./Models/Food');
 const Promo = require('./Models/Promo');
-const Sequelize = require('sequelize');
 
 
-<<<<<<< HEAD
+
 app.use(cors());
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
@@ -43,8 +42,6 @@ KEVIN'S BRANCH
 
 
 
-=======
->>>>>>> origin
 //This is the connection to the MySQL Database
 config.authenticate().then(function(){
     console.log('Database is Running and Connected...');
@@ -246,7 +243,7 @@ app.delete('/promo/:promo_id', function(req, res){
 
 
 app.use(express.json());
-const port = process.env.PORT || 3306;
+const port = process.env.PORT || 3000;
 app.listen(port, () => {
     console.log(`KBRestaurant database is listening on port ${port}`);
 });
