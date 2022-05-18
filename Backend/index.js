@@ -7,7 +7,7 @@ const Drink = require('./Models/Drink');
 const Food = require('./Models/Food');
 const Promo = require('./Models/Promo');
 
-// This is the connection to the MySQL Database
+//This is the connection to the MySQL Database
 config.authenticate().then(function(){
     console.log('Database is Running and Connected...');
 }).catch(function(err){
