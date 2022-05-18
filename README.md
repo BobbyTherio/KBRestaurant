@@ -17,8 +17,8 @@ This is the KBRestaurant, created by Bobby and Kevin for the Final Capstone Proj
 
 
 GitHub README Markdown Cheatsheet
-> [https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet]
+> https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
 
 GitHub Commands Cheatsheet
-> [https://github.com/joshnh/Git-Commands]
+> https://github.com/joshnh/Git-Commands
 
