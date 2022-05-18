@@ -7,7 +7,7 @@ const Drink = require('./Models/Drink');
 const Food = require('./Models/Food');
 const Promo = require('./Models/Promo');
 
-//This is the connection to the MySQL Database
+// This is the connection to the MySQL Database
 config.authenticate().then(function(){
     console.log('Database is Running and Connected...');
 }).catch(function(err){
@@ -18,9 +18,8 @@ app.use(cors());
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 
-//Foreign Keys
-
-     //Food FK
+///////////////////////// FOREIGN KEYS ////////////////////////////
+// Food FK
     Category.hasMany(Food, {
         foreignKey: 'category_id'
     })
@@ -28,7 +27,7 @@ app.use(express.json());
         foreignKey: 'category_id'
     })
     
-    //Drinks FK
+// Drinks FK
     Category.hasMany(Food, {
         foreignKey: 'category_id'
     })
@@ -196,9 +195,8 @@ app.delete('/promo/:promo_id', function(req, res){
     });
 });
 
-
 app.use(express.json());
-const port = process.env.PORT || 3306;
+const port = process.env.PORT || 3000;
 app.listen(port, () => {
     console.log(`KBRestaurant database is listening on port ${port}`);
 });
