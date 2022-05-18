@@ -10,19 +10,19 @@ import { FoodService } from 'src/app/services/food.service';
 export class FoodComponent implements OnInit {
 
 
-@Input() food!: KBFood;
+/* @Input() food!: KBFood;
 
-constructor() { }
+constructor() { } */
 
-/*    food!:KBFood[];
+    food!:KBFood[];
 
   constructor(private foodService:FoodService) {
-    foodService.getFoods().subscribe((results) => {
+    foodService.getFood().subscribe((results) => {
       this.food = results;
     }, (err) => {
       console.log(err);
     });
-   }  */
+   }  
 
   ngOnInit(): void {
   }

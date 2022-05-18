@@ -9,6 +9,7 @@ import { DrinkComponent } from './components/drink/drink.component';
 import { OfferComponent } from './components/offer/offer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DrinksComponent } from './components/drinks/drinks.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HomeComponent,
     FoodComponent,
     DrinkComponent,
-    OfferComponent
+    OfferComponent,
+    DrinksComponent
   ],
   imports: [
     BrowserModule,
