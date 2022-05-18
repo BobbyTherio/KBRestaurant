@@ -20,7 +20,7 @@ app.use(express.json());
 
 //Foreign Keys
 
-     //Food FK
+    //Food FK
     Category.hasMany(Food, {
         foreignKey: 'category_id'
     })
@@ -198,7 +198,7 @@ app.delete('/promo/:promo_id', function(req, res){
 
 
 app.use(express.json());
-const port = process.env.PORT || 3306;
+const port = process.env.PORT || 3000;
 app.listen(port, () => {
     console.log(`KBRestaurant database is listening on port ${port}`);
 });
