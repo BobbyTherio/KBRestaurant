@@ -1,3 +1,32 @@
+<div class="header">
+    <div class="container-fluid">
+      <h1 class="display-5 fw-bold">BEERS</h1>
+    </div>
+</div>
+<hr>
+
 <div *ngFor="let d of drinks">
-    <app-drink [drink]="d"></app-drink>
+    <app-beers [beers]="d"></app-beers>
+</div>
+
+<div class="header">
+    <div class="container-fluid">
+      <h1 class="display-5 fw-bold">COCKTAILS</h1>
+    </div>
+</div>
+<hr>
+
+<div *ngFor="let d of drinks">
+    <app-cocktails [cocktails]="d"></app-cocktails>
+</div>
+
+<div class="header">
+    <div class="container-fluid">
+      <h1 class="display-5 fw-bold">WINES</h1>
+    </div>
+</div>
+<hr>
+
+<div *ngFor="let d of drinks">
+    <app-wines [wines]="d"></app-wines>
 </div>
