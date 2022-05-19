@@ -33,7 +33,7 @@ import { AppetizersComponent } from './components/appetizers/appetizers.componen
     CategoriesComponent,
     CategoryComponent,
     ContactusComponent,
-    ReviewComponent
+    ReviewComponent,
     OffersComponent,
     MainsComponent,
     AppetizersComponent
