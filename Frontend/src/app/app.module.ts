@@ -15,7 +15,9 @@ import { CategoriesComponent } from './components/categories/categories.componen
 import { CategoryComponent } from './components/category/category.component';
 import { ContactusComponent } from './components/contactus/contactus.component';
 import { ReviewComponent } from './components/review/review.component';
-
+import { OffersComponent } from './components/offers/offers.component';
+import { MainsComponent } from './components/mains/mains.component';
+import { AppetizersComponent } from './components/appetizers/appetizers.component';
 
 
 @NgModule({
@@ -32,6 +34,9 @@ import { ReviewComponent } from './components/review/review.component';
     CategoryComponent,
     ContactusComponent,
     ReviewComponent
+    OffersComponent,
+    MainsComponent,
+    AppetizersComponent
   ],
   imports: [
     BrowserModule,

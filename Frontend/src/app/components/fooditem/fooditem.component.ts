@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Category } from 'src/app/interfaces/category';
 import { KBFood } from 'src/app/interfaces/food';
 
 @Component({
@@ -9,9 +8,8 @@ import { KBFood } from 'src/app/interfaces/food';
 })
 export class FooditemComponent implements OnInit {
 
-   @Input() fooditem!: KBFood;
-  
-   
+  @Input() fooditem!: KBFood;
+     
   constructor() { }
 
   ngOnInit(): void {
