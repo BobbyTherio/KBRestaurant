@@ -1,3 +1,24 @@
-<div *ngFor="let f of food">
-    <app-fooditem [fooditem]="f"></app-fooditem>
+<br>
+<div class="food-header">
+    <div class="container-fluid">
+      <h1 class="display-5 fw-bold">APPETIZERS</h1>
+    </div>
 </div>
+<hr>
+
+<div *ngFor="let f of food">
+  <app-appetizers [appetizers]="f"></app-appetizers>
+</div>
+
+<br>
+<div class="p-5 mb-4 bg-light rounded-3">
+  <div class="container-fluid">
+    <h1 class="display-5 fw-bold">Mains</h1>
+  </div>
+</div>
+
+<div *ngFor="let f of food">
+  <app-mains [mains]="f"></app-mains>
+</div>
+
+
