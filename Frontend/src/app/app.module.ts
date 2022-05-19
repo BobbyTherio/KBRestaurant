@@ -9,10 +9,7 @@ import { DrinkComponent } from './components/drink/drink.component';
 import { OfferComponent } from './components/offer/offer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { FooditemComponent } from './components/fooditem/fooditem.component';
 import { DrinksComponent } from './components/drinks/drinks.component';
-import { CategoriesComponent } from './components/categories/categories.component';
-import { CategoryComponent } from './components/category/category.component';
 import { ContactusComponent } from './components/contactus/contactus.component';
 import { ReviewComponent } from './components/review/review.component';
 import { OffersComponent } from './components/offers/offers.component';
@@ -28,10 +25,7 @@ import { AppetizersComponent } from './components/appetizers/appetizers.componen
     FoodComponent,
     DrinkComponent,
     OfferComponent,
-    FooditemComponent,
     DrinksComponent,
-    CategoriesComponent,
-    CategoryComponent,
     ContactusComponent,
     ReviewComponent,
     OffersComponent,
