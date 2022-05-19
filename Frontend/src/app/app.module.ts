@@ -13,9 +13,12 @@ import { FooditemComponent } from './components/fooditem/fooditem.component';
 import { DrinksComponent } from './components/drinks/drinks.component';
 import { CategoriesComponent } from './components/categories/categories.component';
 import { CategoryComponent } from './components/category/category.component';
+import { ContactusComponent } from './components/contactus/contactus.component';
+import { ReviewComponent } from './components/review/review.component';
 import { OffersComponent } from './components/offers/offers.component';
 import { MainsComponent } from './components/mains/mains.component';
 import { AppetizersComponent } from './components/appetizers/appetizers.component';
+
 
 @NgModule({
   declarations: [
@@ -29,6 +32,8 @@ import { AppetizersComponent } from './components/appetizers/appetizers.componen
     DrinksComponent,
     CategoriesComponent,
     CategoryComponent,
+    ContactusComponent,
+    ReviewComponent
     OffersComponent,
     MainsComponent,
     AppetizersComponent
