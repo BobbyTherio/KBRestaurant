@@ -1,13 +1,8 @@
-
-
-@import url(https://fonts.googleapis.com/css?family=Merriweather);
 $red: #e74c3c;
-
-
 
 html, body {
   background: #f1f1f1;
-  font-family: 'Merriweather', sans-serif;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
   padding: 1em;
 }
 
@@ -22,6 +17,7 @@ form {
    max-width: 600px;
    text-align: center;
    margin: 20px auto;
+   border: 1px aqua solid;
   
   input, textarea, button {
      border:0; outline:0;

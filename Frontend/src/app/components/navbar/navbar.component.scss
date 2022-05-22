@@ -1,13 +1,19 @@
 #navbar {
-    background: rgb(41, 41, 41);
+    background: rgb(255, 255, 255);
+    padding-left: 200px;
+}
+
+#name {
+    color:rgb(0, 221, 221);
+    font-weight: bold;
 }
 
 a {
-    color: white;
+    color: rgb(0, 0, 0);
     padding: 20px;
 }
 
 .active{
-    color: aqua !important;
+    color: rgb(0, 221, 221) !important;
 }
 
