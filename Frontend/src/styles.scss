@@ -1,3 +1,14 @@
+@font-face {
+    font-family: "Poppins";
+    src: local("Poppins"), url(./assets/fonts/Poppins-Regular.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: local("Roboto"), url(./assets/fonts/Roboto-Regular.ttf) format("truetype");
+}
+
 body {
     background: rgb(255, 255, 255);
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
 }
