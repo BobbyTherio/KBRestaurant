@@ -14,16 +14,9 @@ export class ContactusComponent implements OnInit {
 
   ngOnInit() {
     this.myForm = this.fb.group({
-      name: ["", [
-        Validators.required
-      ]],
-      email: ["",[
-        Validators.required,
-        Validators.email
-      ]],
-      message:["",[
-        Validators.required,
-      ]]
+      name: ["", [Validators.required]],
+      email: ["",[Validators.required,Validators.email]],
+      message:["",[Validators.required,]]
     })
   }
   onSubmit(){
