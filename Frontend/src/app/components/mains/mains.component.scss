@@ -1,0 +1,28 @@
+.card {
+    padding: 20px;
+    margin-bottom: 10px;
+    max-width: 750px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#description {
+    font-weight: lighter;
+}
+
+#price {
+    font-weight: bold;
+    color: #2EC4B6;
+}
+
+#ingredients {
+    font-size: 11px;
+}
+
+.line{
+    border-bottom: 1px solid #000000;
+    margin-bottom: 20px;
+    color: #2EC4B6 ;
+    
+}
