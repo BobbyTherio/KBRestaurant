@@ -1,16 +1,15 @@
-<div class="container  mb-3">
+<div class="container">
 
-    <div class="card" *ngIf="mains.category.name === 'Mains'">
+    <div class="line" *ngIf="mains.category.name === 'Mains'">
   
-      <div class="card-header bg-dark text-white d-flex flex-row justify-content-between">
-        <h6>{{ mains.name }}</h6>
-        <h6>{{ mains.category.name }}</h6>
+      <div >
+        <h4>{{ mains.name }}</h4>        
       </div>
   
-      <div class="card-body bg-dark text-white">
-        <p>{{ mains.description }}</p>
-        <p>{{ mains.price }}$</p>
-        <p>ingredients: {{ mains.ingredients }}</p>
+      <div >
+        <span id="price">{{ mains.price }}$</span><br>
+        <span id="description">{{ mains.description }}$</span><br>
+        <span id="ingredients">ingredients: {{ mains.ingredients }}</span>
   
       </div>
   
