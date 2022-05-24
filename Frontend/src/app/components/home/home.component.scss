@@ -1,5 +1,4 @@
 img {
-
     width: 35.313rem;
     height: 24.125rem;
     margin-top: 6.25rem;
@@ -22,7 +21,6 @@ img {
 }
 
 #title {
-
     width: 28.938rem;
     height: 11.875rem;
     margin-left: 1.25rem;
@@ -47,7 +45,6 @@ img {
 }
 
 #hometextbutton {
-
     width: 7.938rem;
     height: 2.375rem;
     font-family: 'Poppins';
@@ -63,7 +60,7 @@ img {
 #greybox {
     box-sizing: border-box;
     position: absolute;
-    width: 960px;
+    width: 50%;
     height: 499px;
     left: 0px;
     top: 807px;
@@ -73,9 +70,9 @@ img {
 
 #greenbox {
     position: absolute;
-    width: 944px;
+    width: 50%;
     height: 499px;
-    left: 959px;
+    left: 50%;
     top: 807px;
     background: #2EC4B6;
 }
@@ -90,7 +87,7 @@ img {
     position: absolute;
     width: 310px;
     height: 123px;
-    left: 1292px;
+    left: 1750px;
     top: 985px;
 
     border: 4px solid #FFFFFF;

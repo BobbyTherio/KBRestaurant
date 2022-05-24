@@ -9,20 +9,24 @@
 
 #description {
     font-weight: lighter;
+    color: #000000;
 }
 
 #price {
     font-weight: bold;
-    color: #2EC4B6;
+    color: rgb(41, 41, 41);
 }
 
 #ingredients {
     font-size: 11px;
 }
 
-.line{
+.line {
     border-bottom: 1px solid #F6F6F6;
     margin-bottom: 20px;
-    color: #2EC4B6 ;
-    
+}
+
+#title {
+    color: #2EC4B6;
+    font-weight: bold;
 }

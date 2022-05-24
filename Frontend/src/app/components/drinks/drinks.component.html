@@ -1,4 +1,60 @@
-<div class="header">
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div id="card">
+        <div id="title">Beers</div>
+        <div>
+          <div *ngFor="let d of drinks">
+            <app-beers [beers]="d"></app-beers>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div id="card">
+        <div id="title">Cocktails</div>
+        <div>
+          <div *ngFor="let d of drinks">
+            <app-cocktails [cocktails]="d"></app-cocktails>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div id="card">
+        <div id="title">Wines</div>
+        <div>
+          <div *ngFor="let d of drinks">
+            <app-wines [wines]="d"></app-wines>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="header">
     <div class="container-fluid">
       <h1 class="display-5 fw-bold">BEERS</h1>
     </div>
@@ -29,4 +85,4 @@
 
 <div *ngFor="let d of drinks">
     <app-wines [wines]="d"></app-wines>
-</div>
+</div> -->
