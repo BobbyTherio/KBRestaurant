@@ -17,6 +17,7 @@ import { AppetizersComponent } from './components/appetizers/appetizers.componen
 import { BeersComponent } from './components/beers/beers.component';
 import { WinesComponent } from './components/wines/wines.component';
 import { CocktailsComponent } from './components/cocktails/cocktails.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { CocktailsComponent } from './components/cocktails/cocktails.component';
     AppetizersComponent,
     BeersComponent,
     WinesComponent,
-    CocktailsComponent
+    CocktailsComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

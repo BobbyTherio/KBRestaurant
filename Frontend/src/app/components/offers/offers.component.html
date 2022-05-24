@@ -1,3 +1,14 @@
-<div *ngFor="let o of offers">
-    <app-offer [offer]="o"></app-offer>
-</div>
+<div class="container">
+    <div class="row">
+      <div class="col">
+        <div id="card">
+          <div id="title">Offers</div>
+          <div>
+            <div *ngFor="let o of offers">
+                <app-offer [offer]="o"></app-offer>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

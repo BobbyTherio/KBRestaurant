@@ -1,0 +1,29 @@
+.card {
+    padding: 20px;
+    margin-bottom: 10px;
+    max-width: 750px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#description {
+    font-weight: lighter;
+    color: #000000;
+}
+
+#price {
+    font-weight: bold;
+    color: rgb(41, 41, 41);
+}
+
+.line{
+    border-bottom: 1px solid #F6F6F6;
+    margin-bottom: 20px;
+
+}
+
+#title {
+    color: #2EC4B6;
+    font-weight: bold;
+}

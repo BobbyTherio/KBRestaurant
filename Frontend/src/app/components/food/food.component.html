@@ -1,18 +1,21 @@
 <div class="container">
   <div class="row">
+
     <div class="col">
       <div id="card">
-        <div id="Tittle">Appetizers</div>
+        <div id="title">Appetizers</div>
         <div>
           <div *ngFor="let f of food">
             <app-appetizers [appetizers]="f"></app-appetizers>
           </div>
         </div>
+
       </div>
     </div>
+    
     <div class="col">
       <div id="card">
-        <div id="Tittle">Mains</div>
+        <div id="title">Mains</div>
         <div>
           <div *ngFor="let f of food">
             <app-mains [mains]="f"></app-mains>
@@ -20,31 +23,6 @@
         </div>
       </div>
     </div>
+
   </div>
 </div>
-
-
-
-
-<!-- <div class="header">
-    <div class="container-fluid">
-      <h1 class="display-5 fw-bold">APPETIZERS</h1>
-    </div>
-</div>
-<hr> -->
-
-<!-- <div *ngFor="let f of food">
-  <app-appetizers [appetizers]="f"></app-appetizers>
-</div> -->
-
-<!-- <br>
-<div class="header">
-  <div class="container-fluid">
-    <h1 class="display-5 fw-bold">Mains</h1>
-  </div>
-</div>
-<hr> -->
-
-<!-- <div *ngFor="let f of food">
-  <app-mains [mains]="f"></app-mains>
-</div> -->

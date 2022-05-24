@@ -1,19 +1,14 @@
 <div class="container">
-
-    <div class="card" *ngIf="wines.category.name === 'Wines'">
+  <div class="line" *ngIf="wines.category.name === 'Wines'">
   
-      <div class="card-header bg-dark text-white d-flex flex-row justify-content-between ">
-        <h6>{{ wines.name }}</h6>
-        <h6>{{ wines.category.name }}</h6>
-      </div>
-  
-      <div class="card-body bg-dark text-white">
-        <p>{{ wines.description }}</p>
-        <p>{{ wines.price }}$</p>
-  
-      </div>
-  
+    <div>
+      <h4 id="title">{{ wines.name }}</h4>
     </div>
   
+    <div>
+      <span id="price">{{ wines.price }}$</span><br>
+      <span id="description">{{ wines.description }}</span>
+    </div>
+    <br>
   </div>
-
+</div>
