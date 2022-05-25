@@ -1,12 +1,15 @@
 img {
-    width: 35.313rem;
-    height: 24.125rem;
+    max-width: 100%;
+    height: auto;
+    // width: 35.313rem;
+    // height: 24.125rem;
     margin-top: 6.25rem;
+    
 }
 
 #subtitle {
-    width: 15.625rem;
-    height: 2.25rem;
+    width: 100;
+    height: 100;
     margin-top: 8.75rem;
     margin-left: 1.25rem;
     margin-bottom: 0px;
@@ -21,14 +24,14 @@ img {
 }
 
 #title {
-    width: 28.938rem;
+    width: 56.41387406616862vh;
     height: 11.875rem;
     margin-left: 1.25rem;
     margin-top: 0px;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 1000;
-    font-size: 3.188rem;
+    font-size: 5.44290288153682vh;
     line-height: 4.75rem;
     letter-spacing: 0.085em;
     color: #000000;
@@ -57,20 +60,19 @@ img {
     color: #FFFFFF;
 }
 
-#greybox {
-    box-sizing: border-box;
-    position: fixed;
-    width: 50%;
+#greybox {    
+    margin-top: 200px;       
     height: 499px;
-    left: 0px;
-    top: 807px;
+    padding: 0px;    
     background: #DFE4E4;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    
 }
 
 #greenbox {
-    position: fixed;
-    width: 50%;
+    box-sizing: border-box;
+    margin-top: 200px;
+    // position: fixed;
+    // width: 50%;
     height: 499px;
     left: 50%;
     top: 807px;
@@ -82,16 +84,15 @@ img {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    
+
     gap: 10px;
-    
-    position: absolute;
+
+   
     width: 320px;
     height: 123px;
-    left: 1292px;
-    top: 985px;
-    
-    border: 4px solid #FFFFFF;
+   
+
+    border: 4px solid white;
     border-radius: 74px;
 }
 
@@ -113,125 +114,140 @@ img {
     color: #FFFFFF;
 }
 
-#location {
-    position: absolute;
-    width: 166px;
-    height: 40px;
-    left: 375px;
-    top: 50px;
-    text-align: center;
+#location {    
+    width: 100;
+    height: 100;     
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
-    font-size: 32px;
-    line-height: 48px;
+    font-size: 3.4151547491995733vh;
+    line-height: 5.122732123799359vh;
     letter-spacing: 0.085em;
-
     color: #000000;
 }
 
-#address {
-    position: absolute;
-    width: 621px;
-    height: 128px;
-    left: 144px;
-    top: 110px;
-    text-align: center;
-
+#address {    
+    width: 100;
+    height: 100;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
-    font-size: 26px;
-    line-height: 42px;
+    font-size: 2.774813233724653vh;
+    line-height: 4.482390608324439vh;
     letter-spacing: 0.085em;
-
     color: #000000;
 }
 
-#phonenumber {
-    position: absolute;
-    width: 621px;
-    height: 128px;
-    left: 144px;
-    top: 150px;
+#phonenumber {    
+    width:100;
+    height: 100;    
     text-align: center;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
-    font-size: 26px;
-    line-height: 42px;
+    font-size: 2.774813233724653vh;
+    line-height: 4.482390608324439vh;
     letter-spacing: 0.085em;
-
     color: #000000;
 }
 
-#emailaddress {
-    position: absolute;
-    width: 621px;
-    height: 128px;
-    left: 144px;
-    top: 190px;
+#emailaddress {    
+    width: 100;
+    height: 100;    
     text-align: center;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
-    font-size: 26px;
-    line-height: 42px;
+    font-size: 2.774813233724653vh;
+    line-height: 4.482390608324439vh;
     letter-spacing: 0.085em;
-
     color: #000000;
 }
 
-#hours {
-    position: absolute;
-    width: 166px;
-    height: 40px;
-    left: 375px;
-    top: 300px;
-    text-align: center;
+#hours {    
+    width: 100;
+    height: 100;    
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
-    font-size: 32px;
-    line-height: 48px;
+    font-size: 3.4151547491995733vh;
+    line-height:  5.122732123799359vh;
+    letter-spacing: 0.085em;
+    color: #000000;
+}
+
+#hours1 {    
+    width: 100;
+    height: 100;    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.9882604055496267vh;
+    line-height: 4.482390608324439vh;
     letter-spacing: 0.085em;
 
     color: #000000;
 }
 
-#hours1 {
-    position: absolute;
+#hours2 {    
     width: 629px;
-    height: 95px;
-    left: 144px;
-    top: 360px;
+    height: 95px;    
     text-align: center;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
-    font-size: 28px;
-    line-height: 42px;
+    font-size: 2.9882604055496267vh;
+    line-height: 4.482390608324439vh;
     letter-spacing: 0.085em;
-    
+
     color: #000000;
 }
 
-#hours2 {
-    position: absolute;
-    width: 629px;
-    height: 95px;
-    left: 144px;
-    top: 400px;
-    text-align: center;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 28px;
-    line-height: 42px;
-    letter-spacing: 0.085em;
+@media only screen and (max-width: 600px) {
+    img{
+        width: 100%;
+    }
     
-    color: #000000;
-}
+    #greybox{
+        width: 100%;
+        margin: 0px;
+        margin-top: 40px ;
+    }
+    #greenbox{
+        width: 100%;
+        margin: 0px;
+    }
 
-
-/* @media (max-width: ) */
+    #contactusbutton, #contactustext{
+        color: #000000;
+    }
+    #title{
+        width: 360px;
+        font-size: 30px;
+        text-align: left;
+        margin: 0%;
+        line-height: 50px;
+        letter-spacing: 0.085em;
+    }
+    #address{
+        font-size: 18px;
+    }
+    #phonenumber{
+        font-size: 18px;
+    }
+    #emailaddress{
+        font-size: 18px;
+    }
+    #hours1{
+        font-size: 17px;
+    }
+    #hours2{
+        font-size: 17px;
+    }
+    #subtitle{
+        margin:0px;
+        margin-top: 40px;
+        text-align: center;
+    }
+   
+  }
