@@ -5,6 +5,7 @@ import { DrinksComponent } from './components/drinks/drinks.component';
 import { FoodComponent } from './components/food/food.component';
 import { HomeComponent } from './components/home/home.component';
 import { OffersComponent } from './components/offers/offers.component';
+import { ReviewComponent } from './components/review/review.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -13,6 +14,7 @@ const routes: Routes = [
   {path: 'drinks', component: DrinksComponent},
   {path: 'offers', component: OffersComponent},
   {path: 'contactus', component: ContactusComponent},
+  {path: 'review', component: ReviewComponent},
 
 ];
 

@@ -6,7 +6,7 @@ const Category = require('./Models/Category');
 const Drink = require('./Models/Drink');
 const Food = require('./Models/Food');
 const Promo = require('./Models/Promo');
-const Review = require('./Models/Promo');
+const Review = require('./Models/Review');
 
 //This is the connection to the MySQL Database
 config.authenticate().then(function(){
