@@ -18,6 +18,12 @@ import { BeersComponent } from './components/beers/beers.component';
 import { WinesComponent } from './components/wines/wines.component';
 import { CocktailsComponent } from './components/cocktails/cocktails.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { RatingComponent } from './components/rating/rating.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 
 @NgModule({
@@ -36,7 +42,8 @@ import { FooterComponent } from './components/footer/footer.component';
     BeersComponent,
     WinesComponent,
     CocktailsComponent,
-    FooterComponent
+    FooterComponent,
+    RatingComponent
   ],
   imports: [
     BrowserModule,
@@ -44,6 +51,11 @@ import { FooterComponent } from './components/footer/footer.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatIconModule,
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
