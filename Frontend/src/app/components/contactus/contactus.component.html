@@ -3,16 +3,15 @@
 
     <div class="form-group">
         <!-- Name input -->
-        <input type="text" class="form-control" id="name" placeholder="Enter Your Name" formControlName="name">
+        <input type="text" class="form-control" id="name" placeholder="Name" formControlName="name">
     </div>
         <!-- Name Error -->
     <div class="alert alert-danger" *ngIf="name?.invalid && name?.touched">
         <div *ngIf="name?.errors?.['required']">Name is Required</div>
     </div>
     <!-- Email will start below -->
-    <div class="form-group">
-        
-        <input type="text" class="form-control" id="email" placeholder="Enter Your Email" formControlName="email">
+    <div class="form-group">     
+        <input type="text" class="form-control" id="email" placeholder="Email" formControlName="email">
     </div>
         <!-- Email Error -->
         <div class="alert alert-danger" *ngIf="email?.invalid && email?.touched">
@@ -20,13 +19,12 @@
         </div>
         <!-- Message input -->
     <div class="form-group">
-        
-        <input type="textarea" class="form-control" id="message" placeholder="Enter Your Message" formControlName="message">
+        <input type="textarea" class="form-control" id="message" placeholder="Message" formControlName="message">
     </div>
         <!-- Message Error -->
         <div class="alert alert-danger" *ngIf="message?.invalid && message?.touched">
             <div *ngIf="message?.errors?.['required']">Message is Required</div>
         </div>
         <!-- button -->
-    <button type="submit" class="btn btn-info" [disabled]="myForm.invalid" (click)="onSubmit()">Submit</button>
+    <button type="submit" class="button" [disabled]="myForm.invalid" (click)="onSubmit()">Submit</button>
 </form>

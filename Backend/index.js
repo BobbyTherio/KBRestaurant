@@ -6,6 +6,7 @@ const Category = require('./Models/Category');
 const Drink = require('./Models/Drink');
 const Food = require('./Models/Food');
 const Promo = require('./Models/Promo');
+const Review = require('./Models/Promo');
 
 //This is the connection to the MySQL Database
 config.authenticate().then(function(){
@@ -197,6 +198,46 @@ app.delete('/promo/:promo_id', function(req, res){
         }
         else {
             res.status(404).send('Promo not found');
+        }
+    }).catch(function(err){
+        res.status(500).send(err);
+    });
+});
+
+/////////////////////////// REVIEW //////////////////////////////
+// GET : This get the list of all review
+app.get('/review', function(req, res){
+    Review.findAll().then(function(result){
+        res.status(200).send(result);
+    }).catch(function(err){
+        res.status(500).send(err);
+    });
+});
+
+// POST : Add a new review
+app.post('/review', function(req, res){
+    Review.create(req.body).then(function(result){
+        res.redirect('/review');
+    }).catch(function(err){
+        res.status(500).send(err);
+    });
+});
+
+// DELETE : Delete a review
+app.delete('/review/:review_id', function(req, res){
+    let reviewID = req.params.review_id;
+    //Find the review by ID
+    Review.findByPk(reviewID).then(function(result){
+        if(result){
+            //Delete review from database
+            result.destroy().then(function(){
+                res.redirect('/review');
+            }).catch(function(err){
+                res.status(500).send(err);
+            });
+        }
+        else {
+            res.status(404).send('Review not found');
         }
     }).catch(function(err){
         res.status(500).send(err);
