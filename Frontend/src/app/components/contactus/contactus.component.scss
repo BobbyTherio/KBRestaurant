@@ -18,10 +18,11 @@ form {
   margin: 20px auto;
   
 input, textarea, button {
-    border:0; outline:0;
+    // border:0; outline:0;
     padding: 1em;
     display: block;
     width: 100%;
+    
     margin-top: 1em;
     font-family: "Poppins", Arial, Helvetica, sans-serif;
     resize: none;
@@ -86,6 +87,10 @@ textarea {
 
 .cf:after {
   clear: both;
+}
+
+button{
+  background: #2EC4B6;
 }
 
 

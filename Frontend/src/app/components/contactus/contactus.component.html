@@ -1,9 +1,9 @@
-<h1 class="success">Contact us</h1>
+<h1 >Contact us</h1>
 <form [formGroup]="myForm">
 
     <div class="form-group">
         <!-- Name input -->
-        <input type="text" class="form-control" id="name" placeholder="Name" formControlName="name">
+        <input type="text" class="form-control" name="name" id="name" placeholder="Name" formControlName="name">
     </div>
         <!-- Name Error -->
     <div class="alert alert-danger" *ngIf="name?.invalid && name?.touched">
@@ -11,7 +11,7 @@
     </div>
     <!-- Email will start below -->
     <div class="form-group">     
-        <input type="text" class="form-control" id="email" placeholder="Email" formControlName="email">
+        <input type="text" class="form-control" name="email" id="email" placeholder="Email" formControlName="email">
     </div>
         <!-- Email Error -->
         <div class="alert alert-danger" *ngIf="email?.invalid && email?.touched">
@@ -19,7 +19,7 @@
         </div>
         <!-- Message input -->
     <div class="form-group">
-        <input type="textarea" class="form-control" id="message" placeholder="Message" formControlName="message">
+        <input type="textarea" class="form-control" name="message" id="message" placeholder="Message" formControlName="message">
     </div>
         <!-- Message Error -->
         <div class="alert alert-danger" *ngIf="message?.invalid && message?.touched">
