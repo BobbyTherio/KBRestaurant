@@ -17,7 +17,7 @@ form {
    max-width: 600px;
    text-align: center;
    margin: 20px auto;
-   border: 1px aqua solid;
+   border: 1px #2EC4B6;
   
   input, textarea, button {
      border:0; outline:0;
@@ -86,5 +86,8 @@ form {
     clear: both;
 }
 
+button{
+  background: #2EC4B6;
+}
 
 
