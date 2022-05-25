@@ -59,7 +59,7 @@ img {
 
 #greybox {
     box-sizing: border-box;
-    position: absolute;
+    position: fixed;
     width: 50%;
     height: 499px;
     left: 0px;
@@ -69,7 +69,7 @@ img {
 }
 
 #greenbox {
-    position: absolute;
+    position: fixed;
     width: 50%;
     height: 499px;
     left: 50%;
@@ -93,9 +93,6 @@ img {
     
     border: 4px solid #FFFFFF;
     border-radius: 74px;
-
-  
-
 }
 
 #contactustext {
