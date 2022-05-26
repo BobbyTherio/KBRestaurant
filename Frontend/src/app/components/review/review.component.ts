@@ -27,6 +27,7 @@ export class ReviewComponent implements OnInit {
     this.reviewService.newReview(this.ReviewForm.value).subscribe(() => {
       alert('New review added successfully');
       this.ReviewForm.reset();
+      window.location.reload();
     });
   }
 
@@ -41,11 +42,15 @@ export class ReviewComponent implements OnInit {
   }
 
   //StarRating
-  starRating: number = 1;
+
+  
+  starRating: number = 3;
   starCount: number = 5;
-  onRatingChanged(starRating: number) {
-    this.starRating = starRating;
-    console.log(this.starRating);
+  onRatingChanged(starRating: number) { 
+    console.log(starRating)   
+    this.ReviewForm.value.rating = starRating;
+    this.starRating = starRating    
+    console.log(this.ReviewForm.value);
   }
 }
 
