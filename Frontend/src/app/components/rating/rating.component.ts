@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
-  selector: 'mat-star-rating',
+  selector: 'star-rating',
   templateUrl: './rating.component.html',
   styleUrls: ['./rating.component.scss']
 })
@@ -11,8 +11,9 @@ export class RatingComponent implements OnInit {
   
   totalStar: number = 5;
   ratingArray: number[] = [];
-  
-  constructor() { }
+
+  constructor() {}
+
 
   ngOnInit() {
     for (let index = 0; index < this.totalStar; index++) {

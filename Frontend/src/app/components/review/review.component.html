@@ -1,36 +1,42 @@
 <h1 class="success">Leave a Review</h1>
 <form [formGroup]="ReviewForm">
 
+        <!-- Name Input -->
     <div class="form-group">
-        <!-- Name input -->
-        <input type="text" class="form-control" id="name" placeholder="Name" formControlName="name"></div>
+        <input type="text" class="form-control" id="name" placeholder="Name" formControlName="name">
+    </div>
         <!-- Name Error -->
     <div class="alert alert-danger" *ngIf="name?.invalid && name?.touched">
         <div *ngIf="name?.errors?.['required']">Name is Required</div>
     </div>
-    <!-- Email will start below -->
+
+        <!-- Email Input -->
     <div class="form-group">     
         <input type="text" class="form-control" id="comment" placeholder="Comment" formControlName="comment">
     </div>
         <!-- Email Error -->
-        <div class="alert alert-danger" *ngIf="comment?.invalid && comment?.touched">
-            <div *ngIf="comment?.errors?.['required']">Comment is Required</div>
-        </div>
-<!--    <div class="mb-3">
-            <label class="form-label">Rating</label>
-            <select class="form-select" formControlName="rating">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-            </select>    
-        </div> -->
+    <div class="alert alert-danger" *ngIf="comment?.invalid && comment?.touched">
+        <div *ngIf="comment?.errors?.['required']">Comment is Required</div>
+    </div>
 
+        <!-- Star Rating Input -->
     <div>
-    <mat-star-rating [rating]="starRating" formControlName="rating" (ratingUpdated)="onRatingChanged($event)"></mat-star-rating></div>
+        <star-rating [rating]="starRating" formControlName="rating" (ratingUpdated)="onRatingChanged($event)"></star-rating>
+    </div>
+
         
-       <!-- button -->
+       <!-- Button -->
     <button type="submit" class="button" [disabled]="ReviewForm.invalid" (click)="addReview()">Submit</button>
+
 </form>
 
+<!-- <div class="mb-3">
+    <label class="form-label">Rating</label>
+        <select class="form-select" formControlName="rating">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select>    
+</div> -->
