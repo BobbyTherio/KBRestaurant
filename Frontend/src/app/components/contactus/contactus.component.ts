@@ -24,12 +24,12 @@ export class ContactusComponent implements OnInit {
   }
   onSubmit(){
     this.contactusService.newContactusemail(this.myForm.value).subscribe(() => {
-      alert('New review added successfully');
-      this.myForm.reset();
-      window.location.reload();
+      alert('We will be in contact with you as soon as possible');
+      
     });
     console.log(this.myForm.value)
     this.myForm.reset()
+    window.location.reload();
   }
   
 
