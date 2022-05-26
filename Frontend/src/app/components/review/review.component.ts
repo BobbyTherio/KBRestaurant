@@ -42,7 +42,7 @@ export class ReviewComponent implements OnInit {
   }
 
   //StarRating
-  starRating: number = 1;
+  starRating: number = 5;
   starCount: number = 5;
   onRatingChanged(starRating: number) {
     this.ReviewForm.value.rating = starRating;
