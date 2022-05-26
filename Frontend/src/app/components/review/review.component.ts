@@ -27,6 +27,7 @@ export class ReviewComponent implements OnInit {
     this.reviewService.newReview(this.ReviewForm.value).subscribe(() => {
       alert('New review added successfully');
       this.ReviewForm.reset();
+      window.location.reload();
     });
   }
 

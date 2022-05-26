@@ -23,6 +23,7 @@
     <div>
         <star-rating [rating]="starRating" formControlName="rating" (ratingUpdated)="onRatingChanged($event)"></star-rating>
     </div>
+
         
        <!-- Button -->
     <button type="submit" class="button" [disabled]="ReviewForm.invalid" (click)="addReview()">Submit</button>
