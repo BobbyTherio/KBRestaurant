@@ -15,10 +15,10 @@ export class ReviewComponent implements OnInit {
     this.ReviewForm = this.FormBuilderReview.group({
       name: ["", [Validators.required]],
       comment: ["", [Validators.required]],
-      rating: ["", [Validators.required]],
+      rating: [(this.starRating), [Validators.required]],
     })
    }
-
+  
   ngOnInit(): void {
   }
 
@@ -39,4 +39,13 @@ export class ReviewComponent implements OnInit {
   get rating(){
     return this.ReviewForm.get('rating');
   }
+
+  //StarRating
+  starRating: number = 1;
+  starCount: number = 5;
+  onRatingChanged(starRating: number) {
+    this.starRating = starRating;
+    console.log(this.starRating);
+  }
 }
+
