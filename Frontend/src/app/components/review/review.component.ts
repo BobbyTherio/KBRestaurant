@@ -16,7 +16,7 @@ export class ReviewComponent implements OnInit {
       name: ["", [Validators.required]],
       comment: ["", [Validators.required]],
       rating: [(this.starRating), [Validators.required]],
-    })
+    });
    }
   
   ngOnInit(): void {
@@ -44,6 +44,7 @@ export class ReviewComponent implements OnInit {
   starRating: number = 1;
   starCount: number = 5;
   onRatingChanged(starRating: number) {
+    this.ReviewForm.value.rating = starRating;
     this.starRating = starRating;
     console.log(this.starRating);
   }
