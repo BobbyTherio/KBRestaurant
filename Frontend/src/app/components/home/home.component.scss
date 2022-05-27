@@ -1,8 +1,6 @@
 img {
     max-width: 100%;
     height: auto;
-    // width: 35.313rem;
-    // height: 24.125rem;
     margin-top: 6.25rem; 
 }
 
@@ -12,9 +10,6 @@ img {
     margin-top: 8.75rem;
     margin-left: 1.25rem;
     margin-bottom: 0px;
-
-    font-family: 'Poppins';
-    font-style: normal;
     font-weight: 700;
     font-size: 1.125rem;
     line-height: 1.875rem;
@@ -27,10 +22,8 @@ img {
     height: 11.875rem;
     margin-left: 1.25rem;
     margin-top: 0px;
-    font-family: 'Poppins';
-    font-style: normal;
     font-weight: 1000;
-    font-size: 5.44290288153682vh;
+    font-size: 4rem;
     line-height: 4.75rem;
     letter-spacing: 0.085em;
     color: #000000;
@@ -49,8 +42,6 @@ img {
 #hometextbutton {
     width: 7.938rem;
     height: 2.375rem;
-    font-family: 'Poppins';
-    font-style: normal;
     font-weight: 700;
     font-size: 1.5rem;
     line-height: 2.25rem;
@@ -59,21 +50,17 @@ img {
     color: #FFFFFF;
 }
 
-#greybox {    
-    margin-top: 200px;       
-    height: 53.25vh;
-    padding: 0px;    
-    background: #DFE4E4; 
+#greybox {  
+    margin-top: 6vh;      
+    height: 46.85vh;
+    width: auto;
+    background: #DFE4E4;
 }
 
 #greenbox {
-    box-sizing: border-box;
-    margin-top: 200px;
-    // position: fixed;
-    // width: 50%;
-    height: 53.25vh;
-    left: 50%;
-    top: 807px;
+    margin-top: 6vh;
+    height: 46.85vh;
+    width: auto;
     background: #2EC4B6;
 }
 
@@ -82,142 +69,71 @@ img {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-
     gap: 10px;
-
-   
-    width: 320px;
-    height: 123px;
-   
-
+    width: 50vh;
+    height: 10vh;
     border: 4px solid white;
     border-radius: 74px;
 }
 
-#contactustext {
-    width: 350px;
-    height: 50px;
-    font-family: 'Poppins';
-    font-style: normal;
+#contactustext, #reviewtext {
+    width: 20rem;
     font-weight: 400;
-    font-size: 32px;
-    line-height: 48px;
+    font-size: 2rem;
     text-align: center;
-    /* identical to box height */
-
     letter-spacing: 0.085em;
     text-decoration: none;
     color: #FFFFFF;
 }
 
-#location {    
+#bar {
+    font-size: 6rem;
+    line-height: 2.9rem;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+#location, #hours {    
     width: 100;
     height: 100;     
-    font-family: 'Poppins';
-    font-style: normal;
     font-weight: 700;
-    font-size: 3.4151547491995733vh;
-    line-height: 5.122732123799359vh;
+    font-size: 2.5rem;
+    line-height: 3rem;
     letter-spacing: 0.085em;
     color: #000000;
 }
 
-#address {    
+#address, #phonenumber, #emailaddress, #hours1, #hours2 {    
     width: 100;
     height: 100;
-    font-family: 'Poppins';
-    font-style: normal;
     font-weight: 400;
-    font-size: 2.774813233724653vh;
-    line-height: 4.482390608324439vh;
+    font-size: 2rem;
+    line-height: 3rem;
     letter-spacing: 0.085em;
     color: #000000;
 }
 
-#phonenumber {    
-    width:100;
-    height: 100;    
-    text-align: center;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 2.774813233724653vh;
-    line-height: 4.482390608324439vh;
-    letter-spacing: 0.085em;
-    color: #000000;
-}
-
-#emailaddress {    
-    width: 100;
-    height: 100;    
-    text-align: center;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 2.774813233724653vh;
-    line-height: 4.482390608324439vh;
-    letter-spacing: 0.085em;
-    color: #000000;
-}
-
-#hours {    
-    width: 100;
-    height: 100;    
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 3.4151547491995733vh;
-    line-height:  5.122732123799359vh;
-    letter-spacing: 0.085em;
-    color: #000000;
-}
-
-#hours1 {    
-    width: 100;
-    height: 100;    
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 2.9882604055496267vh;
-    line-height: 4.482390608324439vh;
-    letter-spacing: 0.085em;
-
-    color: #000000;
-}
-
-#hours2 {    
-    width: 629px;
-    height: 95px;    
-    text-align: center;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 2.9882604055496267vh;
-    line-height: 4.482390608324439vh;
-    letter-spacing: 0.085em;
-
-    color: #000000;
-}
-
-@media only screen and (max-width: 600px) {
-    img{
+/* @media only screen and (max-width: 600px) {
+    img {
         width: 100%;
     }
     
-    #greybox{
+    #greybox {
         width: 100%;
         margin: 0px;
         margin-top: 40px ;
     }
-    #greenbox{
+
+    #greenbox {
         width: 100%;
         margin: 0px;
     }
 
-    #contactusbutton, #contactustext{
-        color: #000000;
+    #contactusbutton, #contactustext {
+        color: #ffffff;
     }
-    #title{
+
+    #title {
         width: 360px;
         font-size: 30px;
         text-align: left;
@@ -225,25 +141,84 @@ img {
         line-height: 50px;
         letter-spacing: 0.085em;
     }
-    #address{
-        font-size: 18px;
+
+    #address {
+        font-size: auto;
     }
-    #phonenumber{
-        font-size: 18px;
+
+    #phonenumber {
+        font-size: auto;
     }
-    #emailaddress{
-        font-size: 18px;
+
+    #emailaddress {
+        font-size: auto;
     }
-    #hours1{
-        font-size: 17px;
+
+    #hours1 {
+        font-size: auto;
     }
-    #hours2{
-        font-size: 17px;
+
+    #hours2 {
+        font-size: auto;
     }
-    #subtitle{
-        margin:0px;
+
+    #subtitle {
+        margin: 0px;
         margin-top: 40px;
         text-align: center;
     }
-   
   }
+ */
+
+  // `xs` returns only a ruleset and no media query
+// ... { ... }
+
+ // `sm` applies to x-small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { 
+    div {
+        font-size: 100%;
+    }
+    img {
+        max-width: 100%;
+    }
+ }
+
+ // `md` applies to small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) { 
+    div {
+        font-size: 100%;
+        }
+        img {
+            max-width: 100%;
+        }
+ }
+
+// `lg` applies to medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) { 
+    div {
+        font-size: 100%;
+        }
+        img {
+            max-width: 100%;
+        }
+ }
+
+// `xl` applies to large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) { 
+    div {
+        font-size: 100%;
+        }
+        img {
+            max-width: 100%;
+        }
+ }
+
+// `xxl` applies to x-large devices (large desktops, less than 1400px)
+@media (max-width: 1399.98px) { 
+    div {
+        font-size: 100%;
+        }
+        img {
+            max-width: 100%;
+        }
+ }  

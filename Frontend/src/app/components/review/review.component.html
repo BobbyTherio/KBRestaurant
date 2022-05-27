@@ -3,7 +3,7 @@
 
         <!-- Name Input -->
     <div class="form-group">
-        <input type="text" class="form-control" id="name" placeholder="Name" formControlName="name">
+        <input matInput type="text" class="form-control" id="name" placeholder="Name" formControlName="name">
     </div>
         <!-- Name Error -->
     <div class="alert alert-danger" *ngIf="name?.invalid && name?.touched">
@@ -12,7 +12,7 @@
 
         <!-- Email Input -->
     <div class="form-group">     
-        <input type="text" class="form-control" id="comment" placeholder="Comment" formControlName="comment">
+        <input matInput type="text" class="form-control" id="comment" placeholder="Comment" formControlName="comment">
     </div>
         <!-- Email Error -->
     <div class="alert alert-danger" *ngIf="comment?.invalid && comment?.touched">
