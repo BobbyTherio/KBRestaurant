@@ -71,8 +71,8 @@ img {
     gap: 0.625rem;
     width: 29.281rem;
     min-height: 5.813rem;
-    border: 4px solid white;
-    border-radius: 74px;
+    // border: 4px solid white;
+    // border-radius: 74px;
 }
 
 #contactustext,
@@ -87,21 +87,13 @@ img {
 }
 
 #bar {
-    font-size: 4rem;
+    font-size: 2rem;
+    margin-right: 0.5rem;
+    
     line-height: 2.9rem;
     text-align: center;
     color: #FFFFFF;
-    flex: auto;
-    width: 0px;
-    height: 78.64px;
-    margin-right: 100px;
-    border: 2px solid #FFFFFF;
-
-    /* Inside auto layout */
-
-    flex: none;
-    order: 1;
-    flex-grow: 0;
+    
 }
 #hours{
     margin-top: 1.5rem;
@@ -212,6 +204,9 @@ img {
         min-height: 5.813rem;
         border: 0px solid white;
         // border-radius: 74px;
+    }
+    #bar{
+        visibility: hidden;
     }
 }
 
