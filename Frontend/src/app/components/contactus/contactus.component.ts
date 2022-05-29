@@ -29,7 +29,7 @@ export class ContactusComponent implements OnInit {
     });
     console.log(this.myForm.value)
     this.myForm.reset()
-    window.location.reload();
+    
   }
   
 
