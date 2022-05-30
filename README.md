@@ -7,6 +7,9 @@ This is the KBRestaurant, created by Bobby and Kevin for the Final Capstone Proj
 18/05/22
 > Starting frontend
 
+30/05/22
+> Frontend and Backend Completed
+
 | Date          | Update           | Completed  | Date Completed  |
 | ------------- |:----------------:|-----------:|----------------:|
 | 17/05/22      | Backend          | Yes        | 20/05/22        |
