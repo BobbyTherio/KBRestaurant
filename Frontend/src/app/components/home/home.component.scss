@@ -89,17 +89,19 @@ img {
 #bar {
     font-size: 2rem;
     margin-right: 0.5rem;
-    
+
     line-height: 2.9rem;
     text-align: center;
     color: #FFFFFF;
-    
+
 }
-#hours{
+
+#hours {
     margin-top: 1.5rem;
 
-    
+
 }
+
 #location,
 #hours {
     width: 100;
@@ -124,6 +126,41 @@ img {
     letter-spacing: 0.085em;
     color: #000000;
 }
+
+@media only screen and (min-width:451px) and (max-width:1400px) {
+        
+    img{
+        width:31.25rem;
+        margin-top: 3.125rem;
+    }
+    #title{
+        width:100%;
+    }
+    .container{        
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    #greybox{
+        margin-top: 3.125rem;
+        width: 100%;
+    }
+    #greenbox{
+        margin-top: 0px;
+    }
+    #location,#hours,#contactustext,#reviewtext{
+        font-size: 1.5rem;
+    }
+    #address,#phonenumber,#hours1, #hours2,#emailaddress{
+        font-size: 1rem;
+    }
+   
+}
+
+
+
 
 @media only screen and (max-width: 450px) {
     img {
@@ -155,7 +192,8 @@ img {
         letter-spacing: 0.085em;
     }
 
-    #location, #hours{
+    #location,
+    #hours {
         font-size: 2rem;
         margin: 0px;
         margin-top: 0px;
@@ -186,15 +224,15 @@ img {
         margin: 0px;
         margin-top: 2.5rem;
         margin-left: 2rem;
-        
+
     }
 
-    #homebutton{
+    #homebutton {
         margin-top: 0rem;
         margin-left: 2rem;
     }
 
-    #contactusbutton{
+    #contactusbutton {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -205,7 +243,8 @@ img {
         border: 0px solid white;
         // border-radius: 74px;
     }
-    #bar{
+
+    #bar {
         visibility: hidden;
     }
 }
