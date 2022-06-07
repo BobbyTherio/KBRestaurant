@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Reviews } from 'src/app/interfaces/reviews';
 import { ReviewService } from 'src/app/services/review.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { ReviewService } from 'src/app/services/review.service';
   styleUrls: ['./review.component.scss']
 })
 export class ReviewComponent implements OnInit {
-
+  review!:Reviews[];
   ReviewForm!: FormGroup;
 
   constructor(private FormBuilderReview: FormBuilder, private reviewService: ReviewService) {
@@ -16,6 +17,11 @@ export class ReviewComponent implements OnInit {
       name: ["", [Validators.required]],
       comment: ["", [Validators.required]],
       rating: [(this.starRating), [Validators.required]],
+    });
+    this.reviewService.getReview().subscribe((results) => {
+      this.review = results;
+    }, (err) => {
+      console.log(err);
     });
    }
   

@@ -24,6 +24,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { ReviewsComponent } from './components/reviews/reviews.component';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     WinesComponent,
     CocktailsComponent,
     FooterComponent,
-    RatingComponent
+    RatingComponent,
+    ReviewsComponent
   ],
   imports: [
     BrowserModule,
