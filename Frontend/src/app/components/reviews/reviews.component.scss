@@ -1,0 +1,48 @@
+#reviewscontainer {
+    background: #FFFFFF;
+    border: 0.125rem solid #2EC4B6;
+    border-radius: 1.188rem;
+    max-width: 25rem;    
+    margin: 1.25rem auto;
+    margin-top: 3.125rem ;
+    padding-left: 1.25rem;
+}
+
+#reviewsname{
+    font-size: 1.563rem;
+    font-weight: bolder;
+    padding-left: 1.25rem;
+    padding-top: 1.25rem;
+}
+#reviewsrating{
+   color: black;
+   font-weight:600;
+   padding-left: 1.25rem;
+  
+}
+#rating{
+    color: #2EC4B6;
+    
+    // border: 2px solid #2EC4B6;
+    margin-right: 1.25rem;
+}
+img{
+    height: 0.625rem;
+    padding-left: 1.25rem;
+    margin-bottom: 0.438rem;
+    
+    
+}
+
+#lines{
+    
+    color: lightgrey;
+    padding-left: 0.313rem;
+    // border: 2px solid #2EC4B6;
+    
+}
+
+#reviewscomment{
+    padding-left: 1.25rem;
+    font-size: 1rem;
+}
