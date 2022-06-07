@@ -29,13 +29,8 @@
 
 </form>
 
-<!-- <div class="mb-3">
-    <label class="form-label">Rating</label>
-        <select class="form-select" formControlName="rating">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-    </select>    
-</div> -->
+<div class="container">
+    <div *ngFor="let r of (review | slice:review.length -4)">
+        <app-reviews [reviews]="r"></app-reviews>
+    </div>
+</div>
