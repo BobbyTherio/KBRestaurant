@@ -4,5 +4,3 @@ const config = new Sequelize("kbrestaurant", "bobby", "5AR)^Ro@<hi7C1Pf", {
     dialect: 'mysql'});
 
 module.exports = config;
-
-

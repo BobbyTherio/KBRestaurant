@@ -120,6 +120,55 @@ app.delete('/food/:food_id', function(req, res){
     });
 });
 
+// PATCH : Update food
+app.patch('/food/:food_id', function(req, res){
+    let foodID = req.params.food_id;
+
+    //Find the food 
+    Food.findByPk(foodID).then(function(result){
+        //Check if food was found
+        if(result){
+            //Update Food
+            if (req.body.name === undefined) {
+                result.name = result.name
+            } else {
+                 result.name = req.body.name;
+            }
+            if (req.body.description === undefined){
+                 result.description = result.description
+            } else {
+              result.description = req.body.description;
+            }
+            if (req.body.price === undefined){
+                 result.price = result.price
+            } else {
+              result.price = req.body.price;
+            }
+            if (req.body.category_id === undefined){
+                 result.category_id = result.category_id
+            } else {
+              result.category_id = req.body.category_id;
+            }
+            if (req.body.ingredients === undefined){
+                 result.ingredients = result.ingredients
+            } else {
+              result.ingredients = req.body.ingredients;
+            }
+            //Save changes to DB
+            result.save().then(function(){
+                res.redirect('/food');
+            }).catch(function(err){
+                res.status(500).send(err);
+            });
+        }
+        else {
+            res.status(404).send('Food not found');
+        }
+    }).catch(function(err){
+        res.status(500).send(err);
+    });
+});
+
 /////////////////////////// DRINK //////////////////////////////
 // GET : This get the list of all drink
 app.get('/drink', function(req, res){
@@ -164,6 +213,51 @@ app.delete('/drink/:drink_id', function(req, res){
     });
 });
 
+// PATCH : Update drink
+app.patch('/drink/:drink_id', function(req, res){
+    let drinkID = req.params.drink_id;
+
+    //Find the drink 
+    Drink.findByPk(drinkID).then(function(result){
+        //Check if drink was found
+        if(result){
+            //Update drink
+            if (req.body.name === undefined) {
+                result.name = result.name
+            } else {
+                 result.name = req.body.name;
+            }
+            if (req.body.description === undefined){
+                 result.description = result.description
+            } else {
+              result.description = req.body.description;
+            }
+            if (req.body.price === undefined){
+                 result.price = result.price
+            } else {
+              result.price = req.body.price;
+            }
+            if (req.body.category_id === undefined){
+                 result.category_id = result.category_id
+            } else {
+              result.category_id = req.body.category_id;
+            }
+            //Save changes to DB
+            result.save().then(function(){
+                res.redirect('/drink');
+            }).catch(function(err){
+                res.status(500).send(err);
+            });
+        }
+        else {
+            res.status(404).send('Drink not found');
+        }
+    }).catch(function(err){
+        res.status(500).send(err);
+    });
+});
+
+
 /////////////////////////// PROMO //////////////////////////////
 // GET : This get the list of all promo
 app.get('/promo', function(req, res){
@@ -191,6 +285,60 @@ app.delete('/promo/:promo_id', function(req, res){
         if(result){
             //Delete promo from database
             result.destroy().then(function(){
+                res.redirect('/promo');
+            }).catch(function(err){
+                res.status(500).send(err);
+            });
+        }
+        else {
+            res.status(404).send('Promo not found');
+        }
+    }).catch(function(err){
+        res.status(500).send(err);
+    });
+});
+
+// PATCH : Update promo
+app.patch('/promo/:drink_id', function(req, res){
+    let promoID = req.params.promo_id;
+
+    //Find the promo 
+    Promo.findByPk(promoID).then(function(result){
+        //Check if promo was found
+        if(result){
+            //Update promo
+            if (req.body.name === undefined) {
+                result.name = result.name
+            } else {
+                 result.name = req.body.name;
+            }
+            if (req.body.description === undefined){
+                 result.description = result.description
+            } else {
+              result.description = req.body.description;
+            }
+            if (req.body.price === undefined){
+                 result.price = result.price
+            } else {
+              result.price = req.body.price;
+            }
+            if (req.body.start_date === undefined){
+                 result.start_date = result.start_date
+            } else {
+              result.start_date = req.body.start_date;
+            }
+            if (req.body.end_date === undefined){
+                 result.end_date = result.end_date
+            } else {
+              result.end_date = req.body.end_date;
+            }
+            if (req.body.date === undefined){
+                 result.date = result.date
+            } else {
+              result.date = req.body.date;
+            }
+            //Save changes to DB
+            result.save().then(function(){
                 res.redirect('/promo');
             }).catch(function(err){
                 res.status(500).send(err);
