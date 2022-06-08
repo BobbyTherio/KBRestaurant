@@ -7,6 +7,9 @@ const Drink = require('./Models/Drink');
 const Food = require('./Models/Food');
 const Promo = require('./Models/Promo');
 const Review = require('./Models/Review');
+const User = require('./Models/User');
+const bcrypt = require('bcrypt');
+const saltRounds = 10;
 
 //This is the connection to the MySQL Database
 config.authenticate().then(function(){
@@ -18,6 +21,57 @@ config.authenticate().then(function(){
 app.use(cors());
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
+
+/////////////////////////// REGISTER //////////////////////////////
+app.post('/register', function(req, res){
+
+    let newPassword = req.body.password;
+
+    bcrypt.hash(newPassword, saltRounds, function (err, hash) {
+        let userData = {
+            username: req.body.username,
+            first_name: req.body.first_name,
+            last_name: req.body.last_name,
+            password: hash
+        };
+
+        User.create(userData).then((result) => {
+            res.status(200).send(result);
+        }).catch((err) => {
+            res.status(500).send(err);
+        });
+    });
+});
+
+///////////////////////////// LOGIN ///////////////////////////////
+app.post('/login', function(req, res){
+
+    let username = req.body.username;
+    let password = req.body.password;
+    let userData = {
+        where: {username}
+    }
+
+    //Find the user linked to the username
+    User.findOne(userData).then((result) => {
+
+        if (result){
+            console.log(result);
+            bcrypt.compare(password, result.password, function(err, output) {
+                console.log(output);
+                if(output){
+                    res.status(200).send(result);
+                }else{
+                    res.status(400).send('Wrong Password');
+                }
+            });
+        }else{
+            res.status(404).send('User does not exist');
+        }
+    }).catch((err) => {
+        res.status(500).send(err);
+    });
+});
 
 ///////////////////////// FOREIGN KEYS ////////////////////////////
 // Food FK
