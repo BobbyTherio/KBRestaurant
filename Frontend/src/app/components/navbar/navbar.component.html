@@ -37,8 +37,8 @@
         </li>        
         
         <li class=" d-flex login nav-item">
-          <img class="test1" src="../../../assets/images/User.svg" alt="accounticon" [ngStyle]="{'background-color': test === true ? 'Green': ''}" >
-          <a class="nav-link test " routerLink="login" routerLinkActive="active" >Login</a>
+          <img class="test1" src="../../../assets/images/User.svg" alt="accounticon" [ngStyle]="{'background-color': test === true ? '#2EC4B6': ''}" >
+          <a class="nav-link test " routerLink="login" routerLinkActive="active" [ngStyle]="{'display': test === true ? 'none': ''}">Login</a>
           <a class="nav-link test " href="javascript:void(0)" (click)="logout()" [ngStyle]="{'display': test === true ? '': 'none'}">Logout</a>
         </li>
 

@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-
+  
   test:any;
 
   constructor(private service:UserService, private router: Router) { 
