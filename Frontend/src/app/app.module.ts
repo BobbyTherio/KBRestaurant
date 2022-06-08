@@ -25,6 +25,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { ReviewsComponent } from './components/reviews/reviews.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
 
 
 @NgModule({
@@ -45,7 +47,9 @@ import { ReviewsComponent } from './components/reviews/reviews.component';
     CocktailsComponent,
     FooterComponent,
     RatingComponent,
-    ReviewsComponent
+    ReviewsComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
