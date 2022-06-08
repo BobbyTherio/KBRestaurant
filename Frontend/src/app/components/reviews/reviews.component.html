@@ -1,10 +1,13 @@
 <div class="container">
     <div  id="reviewscontainer" >
         <p id="reviewsname">{{reviews.name.toUpperCase()}}</p>
-        <p id="reviewsrating"><span id="rating">Rating </span>{{reviews.rating}}/5</p>
+        <div id="reviewsrating">
+            <p id="rating">Rating </p><span id="staricon"><star-rating  [rating]="starRating" >hello</star-rating></span>
+        </div>
+        
         <img src="https://www.svgrepo.com/show/156401/quotation-mark.svg" alt="quotation-mark"><span id="lines">-----------------------------</span>
         <h4 id="reviewscomment">{{reviews.comment}}</h4>
-        <star-rating [rating]="starRating" ></star-rating>
+        
             
         
         
