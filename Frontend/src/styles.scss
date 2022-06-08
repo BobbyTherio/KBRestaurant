@@ -45,6 +45,8 @@ $KBRestaurant-theme: mat.define-light-theme((
 body {
     font-family: "Poppins", Arial, Helvetica, sans-serif;
     background-image: url(../src/assets/images/main-background.png);
+    background-size: 100%;
+
 }
 
 html, body {
@@ -53,4 +55,6 @@ html, body {
   margin: 0px;
   padding: 0px;
   overflow-x: hidden; 
+  
+  
 }
