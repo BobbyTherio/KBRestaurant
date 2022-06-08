@@ -13,7 +13,7 @@ import { AuthguardService } from './services/authguard.service';
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: 'home', component: HomeComponent},
-  {path: 'food', component: FoodComponent/* , canActivate: [AuthguardService] */},
+  {path: 'food', component: FoodComponent, canActivate: [AuthguardService] },
   {path: 'drinks', component: DrinksComponent/* , canActivate: [AuthguardService] */},
   {path: 'offers', component: OffersComponent/* , canActivate: [AuthguardService] */},
   {path: 'contactus', component: ContactusComponent},
