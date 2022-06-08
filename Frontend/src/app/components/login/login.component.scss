@@ -1,0 +1,90 @@
+$red: #e74c3c;
+
+html, body {
+  background: #f1f1f1;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  padding: 1em;
+}
+
+h1 {
+   text-align: center;
+   color: #2EC4B6;
+   margin-top: 50px;
+}
+
+form {
+  max-width: 600px;
+  text-align: center;
+  margin: 20px auto;
+  
+input, textarea, button {
+    border:0; outline:0;
+    padding: 1em;
+    display: block;
+    width: 100%;
+    margin-top: 1em;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    resize: none;
+  &:focus {
+    box-shadow: 5px 5px 5px #2ec4b575;
+  }
+}
+
+#message {
+  height:200px;
+}
+
+.button {
+  background-color: #2EC4B6;
+  color: black;
+  font-weight: 700;
+  border-radius: 50px;
+}
+  
+#input-submit {
+  color: white; 
+  background: $red;
+  // cursor: pointer;    
+  &:hover {
+    background-color: #e74c3c;
+  }
+}
+  
+textarea {
+  height: 126px;
+  }
+}
+
+.half {
+  float: left;
+  width: 48%;
+  margin-bottom: 1em;
+}
+
+.right { 
+  width: 50%; 
+}
+
+.left {
+  margin-right: 2%; 
+}
+
+@media (max-width: 480px) {
+  .half {
+     width: 100%; 
+     float: none;
+     margin-bottom: 0; 
+  }
+}
+
+/* Clearfix */
+.cf:before,
+.cf:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.cf:after {
+  clear: both;
+}
+
