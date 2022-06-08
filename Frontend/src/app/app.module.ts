@@ -27,6 +27,11 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { ReviewsComponent } from './components/reviews/reviews.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import { AddFoodComponent } from './components/add-food/add-food.component';
+import { AddDrinkComponent } from './components/add-drink/add-drink.component';
+import { AddOfferComponent } from './components/add-offer/add-offer.component';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 
 
 @NgModule({
@@ -49,7 +54,10 @@ import { RegisterComponent } from './components/register/register.component';
     RatingComponent,
     ReviewsComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    AddFoodComponent,
+    AddDrinkComponent,
+    AddOfferComponent
   ],
   imports: [
     BrowserModule,
@@ -62,6 +70,8 @@ import { RegisterComponent } from './components/register/register.component';
     MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
+    MatNativeDateModule,
+    MatDatepickerModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

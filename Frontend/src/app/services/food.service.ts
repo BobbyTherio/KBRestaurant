@@ -7,9 +7,13 @@ import { KBFood } from '../interfaces/food';
 })
 export class FoodService {
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient:HttpClient) { }
 
   getFood() {
     return this.httpClient.get<KBFood[]>('http://localhost:3000/food');
+  }
+
+  newFood(formFood:any) {
+    return this.httpClient.post('http://localhost:3000/food', formFood);
   }
 }

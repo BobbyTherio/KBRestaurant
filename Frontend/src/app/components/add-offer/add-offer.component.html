@@ -1,0 +1,27 @@
+<h1 class="success">Add Offer</h1>
+<form [formGroup]="addOfferForm">
+
+    <div class="form-group">
+        <input matInput type="text" class="form-control" formControlName="name" placeholder="Name">
+    </div>
+
+    <div class="form-group">
+        <input matInput type="text" class="form-control" formControlName="description" placeholder="Description">
+    </div>
+
+    <div class="form-group">
+        <input matInput type="text" class="form-control" formControlName="price" placeholder="Price">
+    </div>
+
+    <div class="form-group">
+    <label for="birthday">Starting Date</label>
+        <input type="date" class="form-control" formControlName="start_date" placeholder="Starting Date">
+    </div>
+    <div class="form-group">
+    <label for="birthday">Ending Date</label>
+        <input type="date" class="form-control" formControlName="end" placeholder="Ending Date">
+    </div>
+
+
+    <button type="submit" class="button" (click)="addNewOffer()">Submit</button>
+</form>
