@@ -12,7 +12,7 @@ export class LoginComponent implements OnInit {
 
   loginForm;
 
-  constructor(private service:UserService, private formBuilder: FormBuilder,private router:Router) {
+  constructor(private service: UserService, private formBuilder: FormBuilder, private router: Router) {
     this.loginForm = formBuilder.group({
       username: ['', [Validators.required]],
       password: ['', [Validators.required]]
@@ -22,12 +22,20 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  login(){
+  login() {
     let formData = this.loginForm.value;
     this.service.login(formData).subscribe((result) => {
       localStorage.setItem('currentUser', JSON.stringify(result));
-      // alert('Login successful!');
-      this.router.navigate(['home'])
+
+
+      this.router.navigate(['edit'])
+      setTimeout(() => {
+
+        window.location.reload()
+        console.log('Timer')
+      }, 10)
+
+
     }, (err) => {
       alert('Incorrect username or password');
       console.log(err);

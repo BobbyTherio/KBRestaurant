@@ -32,6 +32,7 @@ import { AddDrinkComponent } from './components/add-drink/add-drink.component';
 import { AddOfferComponent } from './components/add-offer/add-offer.component';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatDatepickerModule } from '@angular/material/datepicker';
+import { EditComponent } from './components/edit/edit.component';
 
 
 @NgModule({
@@ -57,7 +58,8 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
     RegisterComponent,
     AddFoodComponent,
     AddDrinkComponent,
-    AddOfferComponent
+    AddOfferComponent,
+    EditComponent
   ],
   imports: [
     BrowserModule,

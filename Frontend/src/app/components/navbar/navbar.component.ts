@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from 'src/app/services/user.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-navbar',
@@ -7,9 +10,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  test:any;
 
-  ngOnInit(): void {
+  constructor(private service:UserService, private router: Router) { 
+    
   }
 
+  ngOnInit(): void {
+    this.test = this.service.isAuthenticated()
+  }
+
+  logout(){
+    localStorage.removeItem("currentUser");
+    
+    this.router.navigate(['home'])
+      setTimeout(() => {
+
+        window.location.reload()
+        console.log('Timer')
+      }, 10)
+  }
 }

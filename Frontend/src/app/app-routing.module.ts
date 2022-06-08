@@ -5,6 +5,7 @@ import { AddFoodComponent } from './components/add-food/add-food.component';
 import { AddOfferComponent } from './components/add-offer/add-offer.component';
 import { ContactusComponent } from './components/contactus/contactus.component';
 import { DrinksComponent } from './components/drinks/drinks.component';
+import { EditComponent } from './components/edit/edit.component';
 import { FoodComponent } from './components/food/food.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
@@ -26,6 +27,7 @@ const routes: Routes = [
   {path: 'add-drink', component: AddDrinkComponent, canActivate: [AuthguardService]},
   {path: 'add-food', component: AddFoodComponent, canActivate: [AuthguardService]},
   {path: 'add-offer', component: AddOfferComponent, canActivate: [AuthguardService]},
+  {path: 'edit', component: EditComponent, canActivate: [AuthguardService]},
 ];
 
 @NgModule({
