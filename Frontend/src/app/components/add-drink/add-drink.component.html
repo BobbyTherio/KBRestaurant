@@ -1,0 +1,26 @@
+<h1 class="success">Add Drink</h1>
+<form [formGroup]="addDrinkForm">
+
+    <div class="form-group">
+        <input matInput type="text" class="form-control" formControlName="name" placeholder="Name">
+    </div>
+
+    <div class="form-group">
+        <input matInput type="text" class="form-control" formControlName="description" placeholder="Description">
+    </div>
+
+    <div class="form-group">
+        <input matInput type="text" class="form-control" formControlName="price" placeholder="Price">
+    </div>
+
+    <div class="form-group">
+        <label class="form-label">Category</label>
+        <select class="form-select" formControlName="category_id" placeholder="Category">
+            <option value="4">Cocktail</option>
+            <option value="5">Beer</option>
+            <option value="6">Wine</option>
+        </select>    
+    </div>
+
+    <button type="submit" class="button" (click)="addNewDrink()">Submit</button>
+</form>

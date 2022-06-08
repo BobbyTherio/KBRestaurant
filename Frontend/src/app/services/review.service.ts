@@ -9,10 +9,11 @@ export class ReviewService {
 
   constructor(private httpClient:HttpClient) { }
 
-  newReview(formReview:any) {
-    return this.httpClient.post('http://localhost:3000/review', formReview);
-  }
   getReview() {
     return this.httpClient.get<Reviews[]>('http://localhost:3000/review');
+  }
+
+  newReview(formReview:any) {
+    return this.httpClient.post('http://localhost:3000/review', formReview);
   }
 }

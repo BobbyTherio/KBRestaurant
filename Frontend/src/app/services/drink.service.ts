@@ -12,4 +12,8 @@ export class DrinkService {
   getDrinks() {
     return this.httpClient.get<KBDrink[]>('http://localhost:3000/drink');
   }
+  
+  newDrink(formDrink:any) {
+    return this.httpClient.post('http://localhost:3000/drink', formDrink);
+  }
 }

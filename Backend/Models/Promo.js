@@ -21,11 +21,11 @@ const Promo = config.define('promos', {
         allowNull: false
     },
     start_date: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.STRING,
         allowNull: true
     },
     end_date: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.STRING,
         allowNull: true
     },
     date: {

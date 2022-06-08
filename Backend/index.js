@@ -353,7 +353,7 @@ app.delete('/promo/:promo_id', function(req, res){
 });
 
 // PATCH : Update promo
-app.patch('/promo/:drink_id', function(req, res){
+app.patch('/promo/:promo_id', function(req, res){
     let promoID = req.params.promo_id;
 
     //Find the promo 
