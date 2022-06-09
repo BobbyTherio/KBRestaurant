@@ -66,7 +66,7 @@ import { DessertsComponent } from './components/desserts/desserts.component';
     AddOfferComponent,
     EditComponent,
     EditFoodComponent,
-    FooditemsComponent
+    FooditemsComponent,
     BreakfastsComponent,
     DessertsComponent
   ],
