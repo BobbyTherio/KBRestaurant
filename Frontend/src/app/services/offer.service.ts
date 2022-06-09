@@ -14,6 +14,6 @@ export class OfferService {
   }
 
   newOffer(formOffer:any) {
-    return this.httpClient.post('http://localhost:3000/promo', formOffer);
+    return this.httpClient.post('http://localhost:3000/add-offer', formOffer);
   }
 }
