@@ -91,17 +91,13 @@ img {
 #bar {
     font-size: 2rem;
     margin-right: 0.5rem;
-
     line-height: 2.9rem;
     text-align: center;
     color: #FFFFFF;
-
 }
 
 #hours {
     margin-top: 1.5rem;
-
-
 }
 
 #location,
@@ -161,8 +157,7 @@ img {
    
 }
 
-
-
+//// Responsive Design ////
 
 @media only screen and (max-width: 450px) {
     img {
@@ -243,64 +238,9 @@ img {
         width: 29.281rem;
         min-height: 5.813rem;
         border: 0px solid white;
-        // border-radius: 74px;
     }
 
     #bar {
         visibility: hidden;
     }
 }
-
-
-// `xs` returns only a ruleset and no media query
-// ... { ... }
-
-// `sm` applies to x-small devices (portrait phones, less than 576px)
-// @media (max-width: 575.98px) { 
-//     div {
-//         font-size: 100%;
-//     }
-//     img {
-//         max-width: 100%;
-//     }
-//  }
-
-//  // `md` applies to small devices (landscape phones, less than 768px)
-// @media (max-width: 767.98px) { 
-//     div {
-//         font-size: 100%;
-//         }
-//         img {
-//             max-width: 100%;
-//         }
-//  }
-
-// // `lg` applies to medium devices (tablets, less than 992px)
-// @media (max-width: 991.98px) { 
-//     div {
-//         font-size: 100%;
-//         }
-//         img {
-//             max-width: 100%;
-//         }
-//  }
-
-// // `xl` applies to large devices (desktops, less than 1200px)
-// @media (max-width: 1199.98px) { 
-//     div {
-//         font-size: 100%;
-//         }
-//         img {
-//             max-width: 100%;
-//         }
-//  }
-
-// // `xxl` applies to x-large devices (large desktops, less than 1400px)
-// @media (max-width: 1399.98px) { 
-//     div {
-//         font-size: 100%;
-//         }
-//         img {
-//             max-width: 100%;
-//         }
-//  }  
