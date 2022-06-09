@@ -26,7 +26,7 @@ export class AddDrinkComponent implements OnInit {
   addNewDrink(){
     console.log(this.addDrinkForm.value);
     this.addDrinkService.newDrink(this.addDrinkForm.value).subscribe(() => {
-      alert('New drink added successfully');
+      alert(`${this.name?.value} has been added successfully`);
       this.addDrinkForm.reset();
       window.location.reload();
     });

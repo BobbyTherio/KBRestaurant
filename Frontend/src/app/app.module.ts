@@ -35,6 +35,9 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { EditComponent } from './components/edit/edit.component';
 import { EditFoodComponent } from './components/edit-food/edit-food.component';
 import { FooditemsComponent } from './components/fooditems/fooditems.component';
+import { BreakfastsComponent } from './components/breakfasts/breakfasts.component';
+import { DessertsComponent } from './components/desserts/desserts.component';
+
 
 
 @NgModule({
@@ -64,6 +67,8 @@ import { FooditemsComponent } from './components/fooditems/fooditems.component';
     EditComponent,
     EditFoodComponent,
     FooditemsComponent
+    BreakfastsComponent,
+    DessertsComponent
   ],
   imports: [
     BrowserModule,
