@@ -40,12 +40,10 @@ export class EditFoodComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  editFood() {
-    console.log(this.editFoodForm.value);    
-    console.log(this.editFoodForm.value.food_id);    
+  editFood() {       
     
     this.editFoodService.editFood(this.editFoodForm.value.food_id,this.editFoodForm.value).subscribe(() => {
-      alert(' Food edited successfully');
+      console.log('I am here');
       this.editFoodForm.reset();
       window.location.reload();
     });
