@@ -175,42 +175,47 @@ app.delete('/food/:food_id', function(req, res){
 });
 
 // PATCH : Update food
-app.patch('/food/:food_id', function(req, res){
+app.patch('/edit-food/:food_id', function(req, res){
     let foodID = req.params.food_id;
 
     //Find the food 
     Food.findByPk(foodID).then(function(result){
+        console.log('Hello From Backend')
+        console.log("")
+        console.log(result)
+        
         //Check if food was found
         if(result){
+            
             //Update Food
-            if (req.body.name === undefined) {
+            if (req.body.name === "") {
                 result.name = result.name
             } else {
                  result.name = req.body.name;
             }
-            if (req.body.description === undefined){
+            if (req.body.description === ""){
                  result.description = result.description
             } else {
               result.description = req.body.description;
             }
-            if (req.body.price === undefined){
-                 result.price = result.price
+            if (req.body.price === ""){
+                 result.price = Number(result.price)
+                 
             } else {
               result.price = req.body.price;
             }
-            if (req.body.category_id === undefined){
-                 result.category_id = result.category_id
+            if (req.body.category_id === ""){
+                 result.category_id = Number(result.category_id)
             } else {
               result.category_id = req.body.category_id;
             }
-            if (req.body.ingredients === undefined){
+            if (req.body.ingredients === ""){
                  result.ingredients = result.ingredients
             } else {
               result.ingredients = req.body.ingredients;
             }
             //Save changes to DB
-            result.save().then(function(){
-                res.redirect('/food');
+            result.save().then(function(){                
             }).catch(function(err){
                 res.status(500).send(err);
             });
