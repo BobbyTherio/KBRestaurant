@@ -323,7 +323,7 @@ app.get('/promo', function(req, res){
 });
 
 // POST : Add a new promo
-app.post('/promo', function(req, res){
+app.post('/add-offer', function(req, res){
     Promo.create(req.body).then(function(result){
         res.redirect('/promo');
     }).catch(function(err){
