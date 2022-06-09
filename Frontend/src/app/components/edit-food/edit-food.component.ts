@@ -16,10 +16,9 @@ export class EditFoodComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private editFoodService: FoodService,
-    private foodService: FoodService,
+    private foodService: FoodService,) 
     
-  ) {
-    this.editFoodForm = this.fb.group({
+    { this.editFoodForm = this.fb.group({
       food_id:[],
       name: ["",],
       description: ["",],
@@ -34,20 +33,21 @@ export class EditFoodComponent implements OnInit {
     }, (err) => {
       console.log(err);
     });
-
   }
 
   ngOnInit(): void {
   }
 
-  editFood() {       
-    
-    this.editFoodService.editFood(this.editFoodForm.value.food_id,this.editFoodForm.value).subscribe(() => {
-      console.log('I am here');
+  editFood() {
+    this.editFoodService.editFood(this.editFoodForm.value.food_id,this.editFoodForm.value).subscribe( response => {
+      if(response){
+        console.log('I am here');
       this.editFoodForm.reset();
       window.location.reload();
+      }
     });
   }
+
   get name() {
     return this.editFoodForm.get('name');
   }

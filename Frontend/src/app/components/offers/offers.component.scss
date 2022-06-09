@@ -13,7 +13,7 @@ hr {
 }
 
 #card {
-    // position: absolute;
+    position: relative;
     // width: 613px;
     // height: 762px;
     // left: 330px;
@@ -22,6 +22,7 @@ hr {
     background: #FFFFFF;
     border: 2px solid #000000;
     border-radius: 19px;
+    width: 40rem;
 }
 
 #title {

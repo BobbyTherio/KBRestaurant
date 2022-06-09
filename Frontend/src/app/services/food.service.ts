@@ -16,7 +16,8 @@ export class FoodService {
   newFood(formFood:any) {
     return this.httpClient.post('http://localhost:3000/food', formFood);
   }
+  
   editFood(id:any,formFood:any) {
-    return this.httpClient.patch(`http://localhost:3000/edit-food/`+id, formFood);
+    return this.httpClient.patch(`http://localhost:3000/food/${id}`, formFood);
   }
 }
