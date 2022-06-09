@@ -27,7 +27,7 @@ export class AddFoodComponent implements OnInit {
   addNewFood(){
     console.log(this.addFoodForm.value);
     this.addFoodService.newFood(this.addFoodForm.value).subscribe(() => {
-      alert('New food added successfully');
+      alert(`${this.name?.value}has been added successfully`);
       this.addFoodForm.reset();
       window.location.reload();
     });
