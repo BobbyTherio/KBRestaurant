@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { FoodService } from 'src/app/services/food.service';
 import { KBFood } from 'src/app/interfaces/food';
+import { response } from 'express';
 
 @Component({
   selector: 'app-edit-food',
@@ -42,10 +43,13 @@ export class EditFoodComponent implements OnInit {
 
   editFood() {       
     
-    this.editFoodService.editFood(this.editFoodForm.value.food_id,this.editFoodForm.value).subscribe(() => {
-      console.log('I am here');
+    this.editFoodService.editFood(this.editFoodForm.value.food_id,this.editFoodForm.value).subscribe( response => {
+      if(response){
+        console.log('I am here');
       this.editFoodForm.reset();
       window.location.reload();
+      }
+      
     });
   }
   get name() {

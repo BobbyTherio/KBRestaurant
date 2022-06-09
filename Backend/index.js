@@ -175,14 +175,11 @@ app.delete('/food/:food_id', function(req, res){
 });
 
 // PATCH : Update food
-app.patch('/edit-food/:food_id', function(req, res){
+app.patch('/food/:food_id', function(req, res){
     let foodID = req.params.food_id;
 
     //Find the food 
-    Food.findByPk(foodID).then(function(result){
-        console.log('Hello From Backend')
-        console.log("")
-        console.log(result)
+    Food.findByPk(foodID).then(function(result){        
         
         //Check if food was found
         if(result){
@@ -215,7 +212,9 @@ app.patch('/edit-food/:food_id', function(req, res){
               result.ingredients = req.body.ingredients;
             }
             //Save changes to DB
-            result.save().then(function(){                
+            result.save().then(function(){  
+                console.log('Here') 
+                                            
             }).catch(function(err){
                 res.status(500).send(err);
             });
