@@ -28,7 +28,7 @@ export class AddOfferComponent implements OnInit {
   addNewOffer(){
     console.log(this.addOfferForm.value);
     this.addOfferService.newOffer(this.addOfferForm.value).subscribe(() => {
-      alert('New offer added successfully');
+      alert(`${this.name?.value} has been added successfully`);
       this.addOfferForm.reset();
       window.location.reload();
     });
