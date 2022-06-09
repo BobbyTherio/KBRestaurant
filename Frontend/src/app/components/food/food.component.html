@@ -24,5 +24,27 @@
       </div>
     </div>
 
+    <div class="col">
+      <div id="card">
+        <div id="title">Breakfasts</div>
+        <div>
+          <div *ngFor="let f of food">
+            <app-breakfasts [breakfasts]="f"></app-breakfasts>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div id="card">
+        <div id="title">Desserts</div>
+        <div>
+          <div *ngFor="let f of food">
+            <app-desserts [desserts]="f"></app-desserts>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </div>

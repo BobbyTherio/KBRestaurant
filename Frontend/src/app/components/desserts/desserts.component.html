@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="line" *ngIf="desserts.category.name === 'Desserts'">
+    
+      <div >
+        <h4 id="title">{{ desserts.name }}</h4>        
+      </div>
+    
+      <div>
+        <span id="price">{{ desserts.price }}$</span><br>
+        <span id="description">{{ desserts.description }}</span><br>
+        <span id="ingredients">Ingredients: {{ desserts.ingredients }}</span>
+      </div>
+      
+    </div>
+  </div>
