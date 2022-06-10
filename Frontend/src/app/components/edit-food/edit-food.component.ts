@@ -11,25 +11,25 @@ import { KBFood } from 'src/app/interfaces/food';
 export class EditFoodComponent implements OnInit {
 
   editFoodForm!: FormGroup;
-  food!:KBFood[]
+  food!:KBFood[];
 
   constructor(
     private fb: FormBuilder,
     private editFoodService: FoodService,
     private foodService: FoodService,) 
-    
+
     { this.editFoodForm = this.fb.group({
-      food_id:[],
-      name: ["",],
-      description: ["",],
-      price: ["",],
-      category_id: ["",],
+      food_id:[""],
+      name: [""],
+      description: [""],
+      price: [""],
+      category_id: [""],
       ingredients: [""],
     })
     
     //Get Food item for dropdown
-    foodService.getFood().subscribe((results) => {
-      this.food = results;
+    foodService.getFood().subscribe((result) => {
+      this.food = result;
     }, (err) => {
       console.log(err);
     });
@@ -39,12 +39,10 @@ export class EditFoodComponent implements OnInit {
   }
 
   editFood() {
-    this.editFoodService.editFood(this.editFoodForm.value.food_id,this.editFoodForm.value).subscribe( response => {
-      if(response){
-        console.log('I am here');
+    this.editFoodService.editFood(this.editFoodForm.value.food_id,this.editFoodForm.value).subscribe((result) => {
+      console.log(result);
       this.editFoodForm.reset();
       window.location.reload();
-      }
     });
   }
 

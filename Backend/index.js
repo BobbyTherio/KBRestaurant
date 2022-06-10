@@ -175,7 +175,7 @@ app.delete('/food/:food_id', function(req, res){
 });
 
 // PATCH : Update food
-app.patch('/edit-food/:food_id', function(req, res){
+app.patch('/food/:food_id', function(req, res){
     let foodID = req.params.food_id;
 
     //Find the food 
@@ -215,7 +215,8 @@ app.patch('/edit-food/:food_id', function(req, res){
               result.ingredients = req.body.ingredients;
             }
             //Save changes to DB
-            result.save().then(function(){                
+            result.save().then(function(){       
+                res.send(result)         
             }).catch(function(err){
                 res.status(500).send(err);
             });
@@ -303,7 +304,7 @@ app.patch('/drink/:drink_id', function(req, res){
             }
             //Save changes to DB
             result.save().then(function(){
-                res.redirect('/drink');
+                res.send(result)
             }).catch(function(err){
                 res.status(500).send(err);
             });
@@ -398,7 +399,7 @@ app.patch('/promo/:promo_id', function(req, res){
             }
             //Save changes to DB
             result.save().then(function(){
-                res.redirect('/promo');
+                res.send(result)
             }).catch(function(err){
                 res.status(500).send(err);
             });
