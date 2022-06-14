@@ -20,4 +20,8 @@ export class FoodService {
   editFood(id:any,formFood:any) {
     return this.httpClient.patch(`http://localhost:3000/food/${id}`, formFood);
   }
+
+  deleteFood(id:any) {
+    return this.httpClient.delete(`http://localhost:3000/food/${id}`);
+  }
 }

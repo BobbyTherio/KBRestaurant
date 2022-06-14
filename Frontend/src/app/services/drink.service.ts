@@ -16,4 +16,12 @@ export class DrinkService {
   newDrink(formDrink:any) {
     return this.httpClient.post('http://localhost:3000/drink', formDrink);
   }
+
+  updateDrink(id:any, formDrink:any) {
+    return this.httpClient.patch('http://localhost:3000/drink'+ id, formDrink);
+  }
+
+  deleteDrink(id:any) {
+    return this.httpClient.delete(`http://localhost:3000/drink/${id}`);
+  }
 }
