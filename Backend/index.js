@@ -213,7 +213,8 @@ app.patch('/food/:food_id', function(req, res){
             }
             //Save changes to DB
             result.save().then(function(){  
-                console.log('Here') 
+                // res.redirect('http://localhost:3000/food/')
+                
                                             
             }).catch(function(err){
                 res.status(500).send(err);

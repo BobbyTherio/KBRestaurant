@@ -29,16 +29,17 @@ export class EditFoodComponent implements OnInit {
       ingredients: [""],
     })
     
+    
+  }
+
+  ngOnInit(): void {
     //Get Food item for dropdown
-    foodService.getFood().subscribe((results) => {
+    this.foodService.getFood().subscribe((results) => {
       this.food = results;
     }, (err) => {
       console.log(err);
     });
 
-  }
-
-  ngOnInit(): void {
   }
 
   editFood() {       
@@ -47,24 +48,24 @@ export class EditFoodComponent implements OnInit {
       if(response){
         console.log('I am here');
       this.editFoodForm.reset();
-      window.location.reload();
+      // window.location.reload();
       }
       
     });
   }
-  get name() {
-    return this.editFoodForm.get('name');
-  }
-  get description() {
-    return this.editFoodForm.get('description');
-  }
-  get price() {
-    return this.editFoodForm.get('price');
-  }
-  get category_id() {
-    return this.editFoodForm.get('category_id');
-  }
-  get ingredients() {
-    return this.editFoodForm.get('ingredients');
-  }
+  // get name() {
+  //   return this.editFoodForm.get('name');
+  // }
+  // get description() {
+  //   return this.editFoodForm.get('description');
+  // }
+  // get price() {
+  //   return this.editFoodForm.get('price');
+  // }
+  // get category_id() {
+  //   return this.editFoodForm.get('category_id');
+  // }
+  // get ingredients() {
+  //   return this.editFoodForm.get('ingredients');
+  // }
 }
