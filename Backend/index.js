@@ -303,7 +303,7 @@ app.patch('/drink/:drink_id', function(req, res){
             }
             //Save changes to DB
             result.save().then(function(){
-                res.redirect('/drink');
+                res.send(result)
             }).catch(function(err){
                 res.status(500).send(err);
             });
@@ -398,7 +398,7 @@ app.patch('/promo/:promo_id', function(req, res){
             }
             //Save changes to DB
             result.save().then(function(){
-                res.redirect('/promo');
+                res.send(result)
             }).catch(function(err){
                 res.status(500).send(err);
             });

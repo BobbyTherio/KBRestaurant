@@ -40,3 +40,27 @@ a {
     outline: 0;
     box-shadow: 0 0 0 .15rem #FFF !important;
 }
+
+#card {
+    // position: absolute;
+    // width: 613px;
+    // height: 762px;
+    // left: 330px;
+    // top: 775px;
+    margin-top: 30px;
+    background: #FFFFFF;
+    border: 2px solid #000000;
+    border-radius: 19px;
+}
+
+#title {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 60px;
+    text-align: center;
+    color: #000000;
+    margin-bottom: 25px;
+    padding-top: 10px;
+}

@@ -12,20 +12,19 @@ import { response } from 'express';
 export class EditFoodComponent implements OnInit {
 
   editFoodForm!: FormGroup;
-  food!:KBFood[]
+  food!:KBFood[];
 
   constructor(
     private fb: FormBuilder,
     private editFoodService: FoodService,
-    private foodService: FoodService,
-    
-  ) {
-    this.editFoodForm = this.fb.group({
-      food_id:[],
-      name: ["",],
-      description: ["",],
-      price: ["",],
-      category_id: ["",],
+    private foodService: FoodService,) 
+
+    { this.editFoodForm = this.fb.group({
+      food_id:[""],
+      name: [""],
+      description: [""],
+      price: [""],
+      category_id: [""],
       ingredients: [""],
     })
     
@@ -39,7 +38,6 @@ export class EditFoodComponent implements OnInit {
     }, (err) => {
       console.log(err);
     });
-
   }
 
   editFood() {       
