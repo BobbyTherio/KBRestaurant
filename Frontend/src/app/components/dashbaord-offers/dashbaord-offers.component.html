@@ -6,7 +6,35 @@
     <a class="active" href="dashboard-offers">Offers</a>
 </div>
 
+<!-- Add Food -->
+<div class="accordion" id="accordionEdit">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+      <button id="add-edit" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        Add Offer
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionEdit">
+      <div class="accordion-body">
+        <app-add-offer></app-add-offer>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- Page content -->
-<div class="content">
-    <p>Dashboard-offers works</p>
+<div class="container">
+    <div class="row">
+  
+      <div class="col">
+        <div id="card">
+          <div id="title" class="DashboardOfferAny">Offers</div>
+          <div>
+            <div *ngFor="let o of offer">
+              <app-dashboard-offer [dashboardoffer]="o" (deleteEvent)="deleteOffer($event)"></app-dashboard-offer>
+            </div>
+          </div>
+        </div>
+        </div>
+    </div>
 </div>

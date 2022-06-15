@@ -17,7 +17,6 @@ import { AppetizersComponent } from './components/appetizers/appetizers.componen
 import { BeersComponent } from './components/beers/beers.component';
 import { WinesComponent } from './components/wines/wines.component';
 import { CocktailsComponent } from './components/cocktails/cocktails.component';
-import { FooterComponent } from './components/footer/footer.component';
 import { RatingComponent } from './components/rating/rating.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
@@ -32,7 +31,6 @@ import { AddDrinkComponent } from './components/add-drink/add-drink.component';
 import { AddOfferComponent } from './components/add-offer/add-offer.component';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatDatepickerModule } from '@angular/material/datepicker';
-import { FooditemsComponent } from './components/fooditems/fooditems.component';
 import { BreakfastsComponent } from './components/breakfasts/breakfasts.component';
 import { DessertsComponent } from './components/desserts/desserts.component';
 import { EditComponent } from './components/edit/edit.component';
@@ -41,9 +39,14 @@ import { DashbaordComponent } from './components/dashbaord/dashbaord.component';
 import { DashbaordFoodComponent } from './components/dashbaord-food/dashbaord-food.component';
 import { DashbaordDrinksComponent } from './components/dashbaord-drinks/dashbaord-drinks.component';
 import { DashbaordOffersComponent } from './components/dashbaord-offers/dashbaord-offers.component';
-import { DashboardFoodItemsComponent } from './components/dashboard-food-items/dashboard-food-items.component';
-
-
+import { DashboardMainsComponent } from './components/dashboard-mains/dashboard-mains.component';
+import { DashboardAppetizerComponent } from './components/dashboard-appetizer/dashboard-appetizer.component';
+import { DashboardBreakfastsComponent } from './components/dashboard-breakfasts/dashboard-breakfasts.component';
+import { DashboardDessertsComponent } from './components/dashboard-desserts/dashboard-desserts.component';
+import { DashboardBeersComponent } from './components/dashboard-beers/dashboard-beers.component';
+import { DashboardCocktailsComponent } from './components/dashboard-cocktails/dashboard-cocktails.component';
+import { DashboardWinesComponent } from './components/dashboard-wines/dashboard-wines.component';
+import { DashboardOfferComponent } from './components/dashboard-offer/dashboard-offer.component';
 
 @NgModule({
   declarations: [
@@ -61,7 +64,6 @@ import { DashboardFoodItemsComponent } from './components/dashboard-food-items/d
     BeersComponent,
     WinesComponent,
     CocktailsComponent,
-    FooterComponent,
     RatingComponent,
     ReviewsComponent,
     LoginComponent,
@@ -71,14 +73,21 @@ import { DashboardFoodItemsComponent } from './components/dashboard-food-items/d
     AddOfferComponent,
     EditComponent,
     EditFoodComponent,
-    FooditemsComponent,
+
     BreakfastsComponent,
     DessertsComponent,
     DashbaordComponent,
     DashbaordFoodComponent,
     DashbaordDrinksComponent,
     DashbaordOffersComponent,
-    DashboardFoodItemsComponent
+    DashboardMainsComponent,
+    DashboardAppetizerComponent,
+    DashboardBreakfastsComponent,
+    DashboardDessertsComponent,
+    DashboardBeersComponent,
+    DashboardCocktailsComponent,
+    DashboardWinesComponent,
+    DashboardOfferComponent,
   ],
   imports: [
     BrowserModule,

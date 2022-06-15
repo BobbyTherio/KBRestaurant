@@ -24,4 +24,8 @@ export class OfferService {
   deleteOffer(id:any) {
     return this.httpClient.delete(`http://localhost:3000/promo/${id}`);
   }
+
+  getOfferID(id:any){
+    return this.httpClient.get(`http://localhost:3000/promo/${id}`)
+  }
 }

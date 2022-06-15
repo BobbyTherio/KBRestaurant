@@ -6,8 +6,58 @@
     <a href="dashboard-offers">Offers</a>
 </div>
 
-<!-- Page content -->
-<div class="content">
-    <p>Dashboard-drinks works</p>
+<!-- Add Food -->
+<div class="accordion" id="accordionEdit">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+      <button id="add-edit" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        Add Drink
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionEdit">
+      <div class="accordion-body">
+        <app-add-drink></app-add-drink>
+      </div>
+    </div>
+  </div>
 </div>
 
+<!-- Page content -->
+<div class="container">
+    <div class="row">
+  
+      <div class="col">
+        <div id="card">
+          <div id="title" class="DashboardBeersAny">Beers</div>
+          <div>
+            <div *ngFor="let d of drink">
+              <app-dashboard-beers [dashboardbeers]="d" (deleteEvent)="deleteBeer($event)"></app-dashboard-beers>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+       <div class="col">
+        <div id="card">
+          <div id="title" class="DashboardWinesAny">Wines</div>
+          <div>
+            <div *ngFor="let d of drink">
+              <app-dashboard-wines [dashboardwines]="d" (deleteEvent)="deleteWine($event)"></app-dashboard-wines>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div id="card">
+          <div id="title" class="DashboardCocktailsAny">Cocktails</div>
+          <div>
+            <div *ngFor="let d of drink">
+              <app-dashboard-cocktails [dashboardcocktails]="d" (deleteEvent)="deleteCocktail($event)"></app-dashboard-cocktails>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  </div>

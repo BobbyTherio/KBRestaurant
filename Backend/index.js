@@ -173,7 +173,7 @@ app.delete('/food/:food_id', function (req, res) {
         if (result) {
             //Delete food from database
             result.destroy().then(function () {
-                res.redirect('/food');
+                res.send(result);
             }).catch(function (err) {
                 res.status(500).send(err);
             });
@@ -227,7 +227,6 @@ app.patch('/food/:food_id', function (req, res) {
             result.save().then(function () {
                 res.send(result)
 
-
             }).catch(function (err) {
                 res.status(500).send(err);
             });
@@ -271,7 +270,7 @@ app.delete('/drink/:drink_id', function (req, res) {
         if (result) {
             //Delete drink from database
             result.destroy().then(function () {
-                res.redirect('/drink');
+                res.send(result);
             }).catch(function (err) {
                 res.status(500).send(err);
             });
@@ -356,7 +355,7 @@ app.delete('/promo/:promo_id', function (req, res) {
         if (result) {
             //Delete promo from database
             result.destroy().then(function () {
-                res.redirect('/promo');
+                res.send(result);
             }).catch(function (err) {
                 res.status(500).send(err);
             });
@@ -450,7 +449,7 @@ app.delete('/review/:review_id', function (req, res) {
         if (result) {
             //Delete review from database
             result.destroy().then(function () {
-                res.redirect('/review');
+                res.send(result);
             }).catch(function (err) {
                 res.status(500).send(err);
             });

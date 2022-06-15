@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DashboardFoodItemsComponent } from './dashboard-food-items.component';
+import { DashboardDessertsComponent } from './dashboard-desserts.component';
 
-describe('DashboardFoodItemsComponent', () => {
-  let component: DashboardFoodItemsComponent;
-  let fixture: ComponentFixture<DashboardFoodItemsComponent>;
+describe('DashboardDessertsComponent', () => {
+  let component: DashboardDessertsComponent;
+  let fixture: ComponentFixture<DashboardDessertsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DashboardFoodItemsComponent ]
+      declarations: [ DashboardDessertsComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DashboardFoodItemsComponent);
+    fixture = TestBed.createComponent(DashboardDessertsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

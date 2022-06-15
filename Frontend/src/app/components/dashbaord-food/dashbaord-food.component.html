@@ -5,51 +5,70 @@
   <a href="dashboard-drinks">Drinks</a>
   <a href="dashboard-offers">Offers</a>
 </div>
-
-<!-- Page content -->
-
-
-<div class="content">
-  <div id="title">Appetizers</div>
-  <div class="test" >
-    <div  *ngFor="let f of food">
-      <div >
-      <app-dashboard-food-items  [dashboardappetizers]="f"></app-dashboard-food-items>
-    </div>
+ 
+<!-- Add Food -->
+<div class="accordion" id="accordionEdit">
+<div class="accordion-item">
+  <h2 class="accordion-header" id="headingOne">
+    <button id="add-edit" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+      Add Food
+    </button>
+  </h2>
+  <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionEdit">
+    <div class="accordion-body">
+      <app-add-food></app-add-food>
     </div>
   </div>
 </div>
+</div>
 
+<!-- Page content -->
+<div class="container">
+  <div class="row">
 
-<!-- <div class="col">
-        <div id="card">
-          <div id="title">Mains</div>
-          <div>
-            <div *ngFor="let f of food">
-              <app-mains [mains]="f"></app-mains>
-            </div>
+    <div class="col">
+      <div id="card">
+        <div id="title" class="DashboardAppetizersAny">Appetizers</div>
+        <div>
+          <div *ngFor="let f of food">
+            <app-dashboard-appetizer [dashboardappetizers]="f" (deleteEvent)="deleteAppetizer($event)"></app-dashboard-appetizer>
           </div>
         </div>
       </div>
-  
-      <div class="col">
-        <div id="card">
-          <div id="title">Breakfasts</div>
-          <div>
-            <div *ngFor="let f of food">
-              <app-breakfasts [breakfasts]="f"></app-breakfasts>
-            </div>
+    </div>
+    
+    <div class="col">
+      <div id="card">
+        <div id="title" class="DashboardMainsAny">Mains</div>
+        <div>
+          <div *ngFor="let f of food">
+            <app-dashboard-mains [dashboardmains]="f" (deleteEvent)="deleteMain($event)"></app-dashboard-mains>
           </div>
         </div>
       </div>
-  
-      <div class="col">
-        <div id="card">
-          <div id="title">Desserts</div>
-          <div>
-            <div *ngFor="let f of food">
-              <app-desserts [desserts]="f"></app-desserts>
-            </div>
+    </div>
+
+    <div class="col">
+      <div id="card">
+        <div id="title" class="DashboardBreakfastsAny">Breakfasts</div>
+        <div>
+          <div *ngFor="let f of food">
+            <app-dashboard-breakfasts [dashboardbreakfasts]="f" (deleteEvent)="deleteBreakfast($event)"></app-dashboard-breakfasts>
           </div>
         </div>
-      </div> -->
+      </div>
+    </div>
+
+    <div class="col">
+      <div id="card">
+        <div id="title" class="DashboardDessertsAny">Desserts</div>
+        <div>
+          <div *ngFor="let f of food">
+            <app-dashboard-desserts [dashboarddesserts]="f" (deleteEvent)="deleteDessert($event)"></app-dashboard-desserts>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

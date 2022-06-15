@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="line" *ngIf="dashboardbeers.category.name === 'Beers'">
+    
+      <div>
+        <h4 id="title">{{ dashboardbeers.name }}</h4>
+        <a routerLink="/drink/{{dashboardbeers.drink_id}}" [ngStyle]="{'display': DashboardBeersAny === true ? '': 'none'}">
+        <button id="edit" type="submit" value={{dashboardbeers.drink_id}}>Edit</button></a>
+        <a><button id="delete" type="button" (click)="clickDelete()">Delete</button></a>   
+      </div>
+
+    </div>
+</div>
