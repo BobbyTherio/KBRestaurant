@@ -28,7 +28,7 @@
           <a class="nav-link" routerLink="offers" routerLinkActive="active">Offers</a>
         </li>
 
-        <li class="nav-item">
+        <li class="nav-item" [ngStyle]="{'display': test === true ? '': 'none'}">
           <a class="nav-link" routerLink="register" routerLinkActive="active">Register</a>
         </li>
 
