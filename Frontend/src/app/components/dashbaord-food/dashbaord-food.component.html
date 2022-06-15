@@ -12,8 +12,10 @@
 <div class="content">
   <div id="title">Appetizers</div>
   <div class="test" >
-    <div class="" *ngFor="let f of food">
-      <app-dashboard-food-items id="test1" [dashboardappetizers]="f"></app-dashboard-food-items>
+    <div  *ngFor="let f of food">
+      <div >
+      <app-dashboard-food-items  [dashboardappetizers]="f"></app-dashboard-food-items>
+    </div>
     </div>
   </div>
 </div>
