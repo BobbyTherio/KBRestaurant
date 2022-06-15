@@ -28,7 +28,7 @@
           <a class="nav-link" routerLink="offers" routerLinkActive="active">Offers</a>
         </li>
 
-        <li class="nav-item">
+        <li class="nav-item" [ngStyle]="{'display': test === true ? '': 'none'}">
           <a class="nav-link" routerLink="register" routerLinkActive="active">Register</a>
         </li>
 
@@ -37,7 +37,8 @@
         </li>        
         
         <li class=" d-flex login nav-item">
-          <img class="test1" src="../../../assets/images/User.svg" alt="accounticon" [ngStyle]="{'background-color': test === true ? '#2EC4B6': ''}" >
+          <img class="test1" src="../../../assets/images/User.svg" alt="accounticon" [ngStyle]="{'display': test === true ? 'none': ''}"  >
+          <img class="test1" src="../../../assets/images/User1.svg" alt="accounticon"[ngStyle]="{'display': test === true ? '': 'none'}">
           <a class="nav-link test " routerLink="login" routerLinkActive="active" [ngStyle]="{'display': test === true ? 'none': ''}">Login</a>
           <a class="nav-link test " href="javascript:void(0)" (click)="logout()" [ngStyle]="{'display': test === true ? '': 'none'}">Logout</a>
         </li>
