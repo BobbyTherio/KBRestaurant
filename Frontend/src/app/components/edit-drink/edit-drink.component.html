@@ -1,0 +1,36 @@
+<h1 class="success">Edit Drink</h1>
+
+<form [formGroup]="editDrinkForm">
+
+    <div class="form-group">
+        <input matInput type="text" class="form-control" formControlName="name" placeholder="Name">
+    </div>
+    
+    <div class="form-group">
+        <input matInput type="text" class="form-control" formControlName="description" placeholder="Description">
+    </div>
+
+    <div class="form-group">
+        <input matInput type="text" class="form-control" formControlName="price" placeholder="Price">
+    </div>
+
+    <div class="form-group">
+        <label class="form-label">Category</label>
+        <select class="form-select" formControlName="category_id" placeholder="Category">
+            <option value="5">Beer</option>
+            <option value="6">Wine</option>
+            <option value="4">Cocktail</option>
+        </select>    
+    </div>
+
+    <a>
+        <button type="submit" class="button" routerLink="/dashboard-drinks" (click)="updateDrink()">Submit</button>
+    </a>
+    <a>
+        <button type="button" class="button" routerLink="/dashboard-drinks">Back</button>
+    </a>
+</form>
+
+
+
+

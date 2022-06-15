@@ -292,23 +292,23 @@ app.patch('/drink/:drink_id', function (req, res) {
         //Check if drink was found
         if (result) {
             //Update drink
-            if (req.body.name === undefined) {
+            if (req.body.name === "") {
                 result.name = result.name
             } else {
                 result.name = req.body.name;
             }
-            if (req.body.description === undefined) {
+            if (req.body.description === "") {
                 result.description = result.description
             } else {
                 result.description = req.body.description;
             }
-            if (req.body.price === undefined) {
-                result.price = result.price
+            if (req.body.price === "") {
+                result.price = Number(result.price)
             } else {
                 result.price = req.body.price;
             }
-            if (req.body.category_id === undefined) {
-                result.category_id = result.category_id
+            if (req.body.category_id === "") {
+                result.category_id = Number(result.category_id)
             } else {
                 result.category_id = req.body.category_id;
             }

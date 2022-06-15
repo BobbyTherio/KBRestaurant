@@ -33,8 +33,9 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { BreakfastsComponent } from './components/breakfasts/breakfasts.component';
 import { DessertsComponent } from './components/desserts/desserts.component';
-import { EditComponent } from './components/edit/edit.component';
 import { EditFoodComponent } from './components/edit-food/edit-food.component';
+import { EditDrinkComponent } from './components/edit-drink/edit-drink.component';
+import { EditOfferComponent } from './components/edit-offer/edit-offer.component';
 import { DashbaordComponent } from './components/dashbaord/dashbaord.component';
 import { DashbaordFoodComponent } from './components/dashbaord-food/dashbaord-food.component';
 import { DashbaordDrinksComponent } from './components/dashbaord-drinks/dashbaord-drinks.component';
@@ -71,9 +72,9 @@ import { DashboardOfferComponent } from './components/dashboard-offer/dashboard-
     AddFoodComponent,
     AddDrinkComponent,
     AddOfferComponent,
-    EditComponent,
     EditFoodComponent,
-
+    EditDrinkComponent,
+    EditOfferComponent,
     BreakfastsComponent,
     DessertsComponent,
     DashbaordComponent,

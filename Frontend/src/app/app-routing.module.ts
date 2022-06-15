@@ -9,8 +9,9 @@ import { DashbaordFoodComponent } from './components/dashbaord-food/dashbaord-fo
 import { DashbaordOffersComponent } from './components/dashbaord-offers/dashbaord-offers.component';
 import { DashbaordComponent } from './components/dashbaord/dashbaord.component';
 import { DrinksComponent } from './components/drinks/drinks.component';
+import { EditDrinkComponent } from './components/edit-drink/edit-drink.component';
 import { EditFoodComponent } from './components/edit-food/edit-food.component';
-import { EditComponent } from './components/edit/edit.component';
+import { EditOfferComponent } from './components/edit-offer/edit-offer.component';
 import { FoodComponent } from './components/food/food.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
@@ -37,7 +38,11 @@ const routes: Routes = [
   {path: 'dashboard-drinks', component: DashbaordDrinksComponent, canActivate: [AuthguardService]},
   {path: 'dashboard-offers', component: DashbaordOffersComponent, canActivate: [AuthguardService]},
   {path: 'edit-food', component: EditFoodComponent, canActivate: [AuthguardService]},
+  {path: 'edit-drink', component: EditDrinkComponent, canActivate: [AuthguardService]},
+  {path: 'edit-offer', component: EditOfferComponent, canActivate: [AuthguardService]},
   {path: 'food/:id', component: EditFoodComponent, canActivate: [AuthguardService]},
+  {path: 'drink/:id', component: EditDrinkComponent, canActivate: [AuthguardService]},
+  {path: 'offer/:id', component: EditOfferComponent, canActivate: [AuthguardService]},
 ];
 
 @NgModule({
