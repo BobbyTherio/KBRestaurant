@@ -253,6 +253,18 @@ app.get('/drink', function (req, res) {
     });
 });
 
+// GET : Drink by id
+
+app.get('/drink/:id/',
+function(req, res){
+    let id = req.params.id;
+    Drink.findByPk(id).then(function(result){        
+      res.status(200).send(result);
+    }).catch(function(err){
+      res.status(500).send(err);
+    });
+  });
+
 // POST : Add a new drink
 app.post('/drink', function (req, res) {
     Drink.create(req.body).then(function (result) {
@@ -338,6 +350,15 @@ app.get('/promo', function (req, res) {
     });
 });
 
+app.get('/promo/:id/',
+function(req, res){
+    let id = req.params.id;
+    Promo.findByPk(id).then(function(result){        
+      res.status(200).send(result);
+    }).catch(function(err){
+      res.status(500).send(err);
+    });
+  });
 // POST : Add a new promo
 app.post('/add-offer', function (req, res) {
     Promo.create(req.body).then(function (result) {
