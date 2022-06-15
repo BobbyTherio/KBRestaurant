@@ -16,7 +16,17 @@
   margin-bottom: 25px;
   padding-top: 10px;
 }
-
+#dashboard {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 60px;
+  text-align: center;
+  color: #000000;
+  margin-bottom: 0px;
+  margin-right: 1rem;
+}
 .accordion {
   margin-top: 50px;
   text-align: center;
@@ -61,6 +71,7 @@
     position: fixed;
     height: 100%;
     overflow: auto;
+    text-align: center;
   }
   
   /* Sidebar links */
@@ -79,7 +90,7 @@
   
   /* Links on mouse-over */
   .sidebar a:hover:not(.active) {
-    background-color: #555;
+    background-color: rgb(212, 209, 209);
     color: white;
   }
   
