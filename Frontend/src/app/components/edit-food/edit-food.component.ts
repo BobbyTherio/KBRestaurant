@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Component, Input, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { FoodService } from 'src/app/services/food.service';
 import { KBFood } from 'src/app/interfaces/food';
-import { response } from 'express';
+import { ActivatedRoute } from '@angular/router';
+
 
 @Component({
   selector: 'app-edit-food',
@@ -10,25 +11,28 @@ import { response } from 'express';
   styleUrls: ['./edit-food.component.scss']
 })
 export class EditFoodComponent implements OnInit {
-
+ 
   editFoodForm!: FormGroup;
   food!:KBFood[];
+  appetizers:any;
+  data:any;
 
   constructor(
     private fb: FormBuilder,
+    private activatedRoute:ActivatedRoute,
     private editFoodService: FoodService,
     private foodService: FoodService,) 
 
-    { this.editFoodForm = this.fb.group({
-      food_id:[""],
-      name: [""],
-      description: [""],
-      price: [""],
-      category_id: [""],
-      ingredients: [""],
-    })
+    { 
     
-    
+      this.editFoodForm = this.fb.group({
+        food_id:[""],
+        name: [""],
+        description: [""],
+        price: [""],
+        category_id: [""],
+        ingredients: [""],
+      })
   }
 
   ngOnInit(): void {
@@ -38,6 +42,20 @@ export class EditFoodComponent implements OnInit {
     }, (err) => {
       console.log(err);
     });
+    
+    this.foodService.getFoodID(this.activatedRoute.snapshot.params?.['id']).subscribe((result:any) =>{
+      console.log(result)
+      this.appetizers = result
+      this.editFoodForm = this.fb.group({
+        food_id:[this.appetizers.food_id],
+        name: [this.appetizers.name],
+        description: [this.appetizers.description],
+        price: [this.appetizers.price],
+        category_id: [this.appetizers.category_id],
+        ingredients: [this.appetizers.ingredients],
+      })
+    })
+    
   }
 
   editFood() {       
@@ -51,6 +69,13 @@ export class EditFoodComponent implements OnInit {
       
     });
   }
+
+  // dataFromAppetizers(message:any){    
+  //   this.data = message
+  //   console.log('hello')
+    
+
+  // }
   // get name() {
   //   return this.editFoodForm.get('name');
   // }
