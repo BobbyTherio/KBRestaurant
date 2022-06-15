@@ -72,7 +72,8 @@
     background-color: #f1f1f1;
     position: fixed;
     height: 100%;
-    overflow: auto;
+    overflow: auto;    
+    text-align: center;
   }
   
   /* Sidebar links */
@@ -91,7 +92,7 @@
   
   /* Links on mouse-over */
   .sidebar a:hover:not(.active) {
-    background-color: #555;
+    background-color: rgb(212, 209, 209);
     color: white;
   }
   
