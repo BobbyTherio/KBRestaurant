@@ -1,12 +1,11 @@
 <div class="container">
-    <div class="line" *ngIf="dashboardcocktails.category.name === 'Beers'">
+    <div class="line" *ngIf="dashboardcocktails.category.name === 'Cocktails'">
     
       <div>
         <h4 id="title">{{ dashboardcocktails.name }}</h4>
         <a routerLink="/drink/{{dashboardcocktails.drink_id}}" [ngStyle]="{'display': DashboardCocktailsAny === true ? '': 'none'}">
         <button id="edit" type="submit" value={{dashboardcocktails.drink_id}}>Edit</button></a>
-        <a routerLink="/drink/{{dashboardcocktails.drink_id}}" [ngStyle]="{'display': DashboardCocktailsAny === true ? '': 'none'}">
-        <button id="delete" type="submit" value={{dashboardcocktails.drink_id}}>Delete</button></a>       
+        <a><button id="delete" type="button" (click)="clickDelete()">Delete</button></a>          
       </div>
 
     </div>

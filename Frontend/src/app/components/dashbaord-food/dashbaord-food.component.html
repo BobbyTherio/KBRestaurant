@@ -15,7 +15,7 @@
         <div id="title" class="DashboardAppetizersAny">Appetizers</div>
         <div>
           <div *ngFor="let f of food">
-            <app-dashboard-appetizer [dashboardappetizers]="f"></app-dashboard-appetizer>
+            <app-dashboard-appetizer [dashboardappetizers]="f" (deleteEvent)="deleteAppetizer($event)"></app-dashboard-appetizer>
           </div>
         </div>
       </div>
@@ -26,7 +26,7 @@
         <div id="title" class="DashboardMainsAny">Mains</div>
         <div>
           <div *ngFor="let f of food">
-            <app-dashboard-mains [dashboardmains]="f"></app-dashboard-mains>
+            <app-dashboard-mains [dashboardmains]="f" (deleteEvent)="deleteMain($event)"></app-dashboard-mains>
           </div>
         </div>
       </div>
@@ -37,7 +37,7 @@
         <div id="title" class="DashboardBreakfastsAny">Breakfasts</div>
         <div>
           <div *ngFor="let f of food">
-            <app-dashboard-breakfasts [dashboardbreakfasts]="f"></app-dashboard-breakfasts>
+            <app-dashboard-breakfasts [dashboardbreakfasts]="f" (deleteEvent)="deleteBreakfast($event)"></app-dashboard-breakfasts>
           </div>
         </div>
       </div>
@@ -48,7 +48,7 @@
         <div id="title" class="DashboardDessertsAny">Desserts</div>
         <div>
           <div *ngFor="let f of food">
-            <app-dashboard-desserts [dashboarddesserts]="f"></app-dashboard-desserts>
+            <app-dashboard-desserts [dashboarddesserts]="f" (deleteEvent)="deleteDessert($event)"></app-dashboard-desserts>
           </div>
         </div>
       </div>

@@ -5,8 +5,7 @@
         <h4 id="title">{{ dashboardbreakfasts.name }}</h4>
         <a routerLink="/food/{{dashboardbreakfasts.food_id}}" [ngStyle]="{'display': DashboardBreakfastsAny === true ? '': 'none'}">
         <button id="edit" type="submit" value={{dashboardbreakfasts.food_id}}>Edit</button></a>
-        <a routerLink="/food/{{dashboardbreakfasts.food_id}}" [ngStyle]="{'display': DashboardBreakfastsAny === true ? '': 'none'}">
-        <button id="delete" type="submit" value={{dashboardbreakfasts.food_id}}>Delete</button></a>    
+        <a><button id="delete" type="button" (click)="clickDelete()">Delete</button></a>    
       </div>
 
   </div>

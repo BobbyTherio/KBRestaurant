@@ -17,7 +17,6 @@ import { AppetizersComponent } from './components/appetizers/appetizers.componen
 import { BeersComponent } from './components/beers/beers.component';
 import { WinesComponent } from './components/wines/wines.component';
 import { CocktailsComponent } from './components/cocktails/cocktails.component';
-import { FooterComponent } from './components/footer/footer.component';
 import { RatingComponent } from './components/rating/rating.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
@@ -32,7 +31,6 @@ import { AddDrinkComponent } from './components/add-drink/add-drink.component';
 import { AddOfferComponent } from './components/add-offer/add-offer.component';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatDatepickerModule } from '@angular/material/datepicker';
-import { FooditemsComponent } from './components/fooditems/fooditems.component';
 import { BreakfastsComponent } from './components/breakfasts/breakfasts.component';
 import { DessertsComponent } from './components/desserts/desserts.component';
 import { EditComponent } from './components/edit/edit.component';
@@ -66,7 +64,6 @@ import { DashboardOfferComponent } from './components/dashboard-offer/dashboard-
     BeersComponent,
     WinesComponent,
     CocktailsComponent,
-    FooterComponent,
     RatingComponent,
     ReviewsComponent,
     LoginComponent,
@@ -76,7 +73,7 @@ import { DashboardOfferComponent } from './components/dashboard-offer/dashboard-
     AddOfferComponent,
     EditComponent,
     EditFoodComponent,
-    FooditemsComponent,
+
     BreakfastsComponent,
     DessertsComponent,
     DashbaordComponent,

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { KBDrink } from 'src/app/interfaces/drink';
 import { UserService } from 'src/app/services/user.service';
 
@@ -12,9 +12,17 @@ export class DashboardCocktailsComponent implements OnInit {
   @Input() dashboardcocktails!: KBDrink;
   DashboardCocktailsAny: any;
 
+  // Delete Function
+  @Output() deleteEvent = new EventEmitter();
+
   constructor(private dashboardCocktailsService: UserService) { }
 
   ngOnInit(): void {
     this.DashboardCocktailsAny = this.dashboardCocktailsService.isAuthenticated()
+  }
+
+  // Delete Button
+  clickDelete() {
+    this.deleteEvent.emit(this.dashboardcocktails);
   }
 }
