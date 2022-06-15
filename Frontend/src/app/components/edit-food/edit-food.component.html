@@ -4,14 +4,14 @@
 
 
 
-<form [formGroup]="editFoodForm">
+<form [formGroup]="editFoodForm"  >
 
-    <div class="form-group">
+    <div class="form-group"  >
         <label class="form-label">Food List</label>
         <select class="form-select" formControlName="food_id" placeholder="foodList">
             <option value={{f.food_id}} *ngFor="let f of food"  >
                 {{f.name}}
-                <!-- <app-fooditems [fooditems]="f" ></app-fooditems> -->
+                
             </option>
             
         </select>    
@@ -20,7 +20,7 @@
     <div class="form-group">
         <input matInput type="text" class="form-control" formControlName="name" placeholder="Name">
     </div>
-
+    
     <div class="form-group">
         <input matInput type="text" class="form-control" formControlName="description" placeholder="Description">
     </div>
@@ -45,3 +45,7 @@
 
     <button type="submit" class="button" (click)="editFood()">Submit</button>
 </form>
+
+
+
+

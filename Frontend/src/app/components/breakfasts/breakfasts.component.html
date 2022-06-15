@@ -2,7 +2,9 @@
     <div class="line" *ngIf="breakfasts.category.name === 'Breakfasts'">
     
       <div >
-        <h4 id="title">{{ breakfasts.name }}</h4>        
+        <h4 id="title">{{ breakfasts.name }}</h4>
+        <a routerLink="/food/{{breakfasts.food_id}}">
+        <button type="submit" value={{breakfasts.food_id}} >Edit </button></a>      
       </div>
     
       <div>
