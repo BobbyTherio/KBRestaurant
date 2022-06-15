@@ -3,7 +3,7 @@
   
     <div >
       <h4 id="title">{{ mains.name }}</h4>
-      <a routerLink="/food/{{mains.food_id}}">
+      <a routerLink="/food/{{mains.food_id}}" [ngStyle]="{'display': test === true ? '': 'none'}">
       <button type="submit" value={{mains.food_id}} >Edit </button></a>        
     </div>
   

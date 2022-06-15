@@ -4,7 +4,7 @@
   
     <div  >
       <h4 id="title">{{ appetizers.name }}</h4>
-      <a routerLink="/food/{{appetizers.food_id}}">
+      <a routerLink="/food/{{appetizers.food_id}}" [ngStyle]="{'display': test === true ? '': 'none'}">
       <button type="submit" value={{appetizers.food_id}} >Edit </button></a>
       
     </div>
