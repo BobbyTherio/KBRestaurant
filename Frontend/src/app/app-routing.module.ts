@@ -4,6 +4,10 @@ import { AddDrinkComponent } from './components/add-drink/add-drink.component';
 import { AddFoodComponent } from './components/add-food/add-food.component';
 import { AddOfferComponent } from './components/add-offer/add-offer.component';
 import { ContactusComponent } from './components/contactus/contactus.component';
+import { DashbaordDrinksComponent } from './components/dashbaord-drinks/dashbaord-drinks.component';
+import { DashbaordFoodComponent } from './components/dashbaord-food/dashbaord-food.component';
+import { DashbaordOffersComponent } from './components/dashbaord-offers/dashbaord-offers.component';
+import { DashbaordComponent } from './components/dashbaord/dashbaord.component';
 import { DrinksComponent } from './components/drinks/drinks.component';
 import { EditFoodComponent } from './components/edit-food/edit-food.component';
 import { EditComponent } from './components/edit/edit.component';
@@ -28,7 +32,10 @@ const routes: Routes = [
   {path: 'add-drink', component: AddDrinkComponent, canActivate: [AuthguardService]},
   {path: 'add-food', component: AddFoodComponent, canActivate: [AuthguardService]},
   {path: 'add-offer', component: AddOfferComponent, canActivate: [AuthguardService]},
-  {path: 'edit', component: EditComponent, canActivate: [AuthguardService]},
+  {path: 'dashboard', component: DashbaordComponent, canActivate: [AuthguardService]},
+  {path: 'dashboard-food', component: DashbaordFoodComponent, canActivate: [AuthguardService]},  
+  {path: 'dashboard-drinks', component: DashbaordDrinksComponent, canActivate: [AuthguardService]},
+  {path: 'dashboard-offers', component: DashbaordOffersComponent, canActivate: [AuthguardService]},
   {path: 'edit-food', component: EditFoodComponent, canActivate: [AuthguardService]},
   {path: 'food/:id', component: EditFoodComponent, canActivate: [AuthguardService]},
 ];

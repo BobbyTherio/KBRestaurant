@@ -37,6 +37,10 @@ import { BreakfastsComponent } from './components/breakfasts/breakfasts.componen
 import { DessertsComponent } from './components/desserts/desserts.component';
 import { EditComponent } from './components/edit/edit.component';
 import { EditFoodComponent } from './components/edit-food/edit-food.component';
+import { DashbaordComponent } from './components/dashbaord/dashbaord.component';
+import { DashbaordFoodComponent } from './components/dashbaord-food/dashbaord-food.component';
+import { DashbaordDrinksComponent } from './components/dashbaord-drinks/dashbaord-drinks.component';
+import { DashbaordOffersComponent } from './components/dashbaord-offers/dashbaord-offers.component';
 
 
 
@@ -68,7 +72,11 @@ import { EditFoodComponent } from './components/edit-food/edit-food.component';
     EditFoodComponent,
     FooditemsComponent,
     BreakfastsComponent,
-    DessertsComponent
+    DessertsComponent,
+    DashbaordComponent,
+    DashbaordFoodComponent,
+    DashbaordDrinksComponent,
+    DashbaordOffersComponent
   ],
   imports: [
     BrowserModule,

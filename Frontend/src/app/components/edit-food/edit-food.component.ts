@@ -62,9 +62,12 @@ export class EditFoodComponent implements OnInit {
     
     this.editFoodService.editFood(this.editFoodForm.value.food_id,this.editFoodForm.value).subscribe( response => {
       if(response){
-        console.log('I am here');
-      this.editFoodForm.reset();
-      // window.location.reload();
+        setTimeout(() => {
+          this.editFoodForm.reset();
+          window.location.reload()
+          
+        }, )
+      
       }
       
     });
