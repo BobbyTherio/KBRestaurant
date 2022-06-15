@@ -12,11 +12,7 @@ export class MainsComponent implements OnInit {
   @Input() mains!: KBFood;
   test:any;
 
-  constructor(
-    private service:UserService,
-  ) { 
-
-  }
+  constructor(private service:UserService) {}
 
   ngOnInit(): void {
     this.test = this.service.isAuthenticated()

@@ -10,19 +10,15 @@ import { FoodService } from 'src/app/services/food.service';
 export class DashbaordFoodComponent implements OnInit {
 
    food!:KBFood[];
-  constructor(
-    private foodService: FoodService,
-  )
-  { 
+
+  constructor(private foodService: FoodService) { 
     foodService.getFood().subscribe((results) => {
       this.food = results;
     }, (err) => {
       console.log(err);
     });
-
   }
 
   ngOnInit(): void {
   }
-
 }

@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="line" *ngIf="dashboarddesserts.category.name === 'Desserts'">
+    
+      <div >
+        <h4 id="title">{{ dashboarddesserts.name }}</h4>
+        <a routerLink="/food/{{dashboarddesserts.food_id}}" [ngStyle]="{'display': DashboardDessertsAny === true ? '': 'none'}">
+        <button type="submit" value={{dashboarddesserts.food_id}} >Edit</button></a>
+        <a routerLink="/food/{{dashboarddesserts.food_id}}" [ngStyle]="{'display': DashboardDessertsAny === true ? '': 'none'}">
+        <button type="submit" value={{dashboarddesserts.food_id}}>Delete</button></a>       
+      </div>
+    
+      
+    </div>
+  </div>

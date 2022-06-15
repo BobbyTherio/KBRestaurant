@@ -41,9 +41,10 @@ import { DashbaordComponent } from './components/dashbaord/dashbaord.component';
 import { DashbaordFoodComponent } from './components/dashbaord-food/dashbaord-food.component';
 import { DashbaordDrinksComponent } from './components/dashbaord-drinks/dashbaord-drinks.component';
 import { DashbaordOffersComponent } from './components/dashbaord-offers/dashbaord-offers.component';
-import { DashboardFoodItemsComponent } from './components/dashboard-food-items/dashboard-food-items.component';
-
-
+import { DashboardMainsComponent } from './components/dashboard-mains/dashboard-mains.component';
+import { DashboardAppetizerComponent } from './components/dashboard-appetizer/dashboard-appetizer.component';
+import { DashboardBreakfastsComponent } from './components/dashboard-breakfasts/dashboard-breakfasts.component';
+import { DashboardDessertsComponent } from './components/dashboard-desserts/dashboard-desserts.component';
 
 @NgModule({
   declarations: [
@@ -78,7 +79,10 @@ import { DashboardFoodItemsComponent } from './components/dashboard-food-items/d
     DashbaordFoodComponent,
     DashbaordDrinksComponent,
     DashbaordOffersComponent,
-    DashboardFoodItemsComponent
+    DashboardMainsComponent,
+    DashboardAppetizerComponent,
+    DashboardBreakfastsComponent,
+    DashboardDessertsComponent,
   ],
   imports: [
     BrowserModule,

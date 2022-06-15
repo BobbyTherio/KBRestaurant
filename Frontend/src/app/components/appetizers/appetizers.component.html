@@ -2,7 +2,7 @@
   <div class="line" *ngIf="appetizers.category.name === 'Appetizers'">
     
   
-    <div  >
+    <div>
       <h4 id="title">{{ appetizers.name }}</h4>
       
       <a routerLink="/food/{{appetizers.food_id}}" [ngStyle]="{'display': test === true ? '': 'none'}">

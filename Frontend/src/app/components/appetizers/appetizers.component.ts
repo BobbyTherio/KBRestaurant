@@ -12,14 +12,8 @@ export class AppetizersComponent implements OnInit {
   @Input() appetizers!: KBFood;  
   food!:any;
   test:any;
-  
 
-  constructor(
-    private service:UserService,
-  )
-   {
-
-   }
+  constructor(private service:UserService){}
 
   ngOnInit(): void {
     this.test = this.service.isAuthenticated()
@@ -39,8 +33,6 @@ export class AppetizersComponent implements OnInit {
   //   // this.appetizersItemId.emit(this.appetizers.food_id);
   //   // this.appetizersItemId.emit(this.appetizers.food_id);
   //    }
-
-
-  }
+}
 
 

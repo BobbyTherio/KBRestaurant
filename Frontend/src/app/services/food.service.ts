@@ -24,4 +24,8 @@ export class FoodService {
   getFoodID(id:any){
     return this.httpClient.get(`http://localhost:3000/food/${id}`)
   }
+
+  deleteFood(id:any) {
+    return this.httpClient.delete(`http://localhost:3000/food/${id}`);
+  }
 }
