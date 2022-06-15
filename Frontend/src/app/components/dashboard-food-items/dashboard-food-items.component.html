@@ -1,0 +1,20 @@
+
+
+  <div class="test">
+    <div class="test" *ngIf="dashboardappetizers.category.name === 'Appetizers'">
+     
+      <div class="card1">
+        <h5 class="">{{ dashboardappetizers.name }}</h5>
+        <a routerLink="/food/{{dashboardappetizers.food_id}}" [ngStyle]="{'display': test === true ? '': 'none'}">
+            <button type="submit" value={{dashboardappetizers.food_id}} >Edit </button>
+            </a>
+        <a routerLink="/food/{{dashboardappetizers.food_id}}" [ngStyle]="{'display': test === true ? '': 'none'}">
+            <button type="submit" value={{dashboardappetizers.food_id}} >Delete </button>
+            </a>
+        
+      </div>
+    </div>
+
+
+
+    

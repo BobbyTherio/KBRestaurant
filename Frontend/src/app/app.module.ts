@@ -41,6 +41,7 @@ import { DashbaordComponent } from './components/dashbaord/dashbaord.component';
 import { DashbaordFoodComponent } from './components/dashbaord-food/dashbaord-food.component';
 import { DashbaordDrinksComponent } from './components/dashbaord-drinks/dashbaord-drinks.component';
 import { DashbaordOffersComponent } from './components/dashbaord-offers/dashbaord-offers.component';
+import { DashboardFoodItemsComponent } from './components/dashboard-food-items/dashboard-food-items.component';
 
 
 
@@ -76,7 +77,8 @@ import { DashbaordOffersComponent } from './components/dashbaord-offers/dashbaor
     DashbaordComponent,
     DashbaordFoodComponent,
     DashbaordDrinksComponent,
-    DashbaordOffersComponent
+    DashbaordOffersComponent,
+    DashboardFoodItemsComponent
   ],
   imports: [
     BrowserModule,
