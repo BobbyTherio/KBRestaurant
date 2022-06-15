@@ -5,8 +5,7 @@
         <h4 id="title">{{ dashboardoffer.name }}</h4>
         <a routerLink="/promo/{{dashboardoffer.promo_id}}" [ngStyle]="{'display': DashboardOfferAny === true ? '': 'none'}">
         <button id="edit" type="submit" value={{dashboardoffer.promo_id}}>Edit</button></a>
-        <a routerLink="/promo/{{dashboardoffer.promo_id}}" [ngStyle]="{'display': DashboardOfferAny === true ? '': 'none'}">
-        <button id="delete" type="submit" value={{dashboardoffer.promo_id}}>Delete</button></a>       
+        <a><button id="delete" type="button" (click)="clickDelete()">Delete</button></a>      
       </div>
 
     </div>

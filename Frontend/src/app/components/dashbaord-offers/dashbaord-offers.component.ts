@@ -21,4 +21,22 @@ export class DashbaordOffersComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  deleteOffer(dashboardoffer:KBOffer) {
+    this.OfferService.deleteOffer(dashboardoffer.promo_id).subscribe((results) => {
+      console.log(results);
+
+      //Remove breakfast from our browser view
+      //Find index of the breakfast we want to delete
+      let index = this.offer.findIndex(o => {
+        return o.promo_id === dashboardoffer.promo_id;
+      });
+
+      //Delete breakfast from drink
+      this.offer.splice(index, 1);
+
+    }, (err) => {
+      console.log(err)
+    });
+  }
 }

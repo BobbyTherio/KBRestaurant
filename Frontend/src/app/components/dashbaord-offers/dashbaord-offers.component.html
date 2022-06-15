@@ -31,7 +31,7 @@
           <div id="title" class="DashboardOfferAny">Offers</div>
           <div>
             <div *ngFor="let o of offer">
-              <app-dashboard-offer [dashboardoffer]="o"></app-dashboard-offer>
+              <app-dashboard-offer [dashboardoffer]="o" (deleteEvent)="deleteOffer($event)"></app-dashboard-offer>
             </div>
           </div>
         </div>
