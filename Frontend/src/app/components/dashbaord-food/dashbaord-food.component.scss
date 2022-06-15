@@ -1,9 +1,4 @@
 #card {
-  // position: absolute;
-  // width: 613px;
-  // height: 762px;
-  // left: 330px;
-  // top: 775px;
   margin-top: 30px;
   background: #FFFFFF;
   border: 2px solid #000000;
@@ -20,6 +15,41 @@
   color: #000000;
   margin-bottom: 25px;
   padding-top: 10px;
+}
+
+.accordion {
+  margin-top: 50px;
+  text-align: center;
+  position: relative;
+  left: 33%;
+  width: 35%;
+}
+
+#add-edit {
+    font-size: 1.5rem;
+    background: linear-gradient(to right, #2EC4B6, #84fff3);
+    background-color: rgb(61, 61, 61) !important;
+    color: #FFF;
+}
+
+.accordion-button:not(.collapsed) {
+    color: #FFF  !important;
+    background-color: #2EC4B6 !important;
+}
+
+.accordion-button:link, .accordion-button:visited, .accordion-button:hover, .accordion-button:active  {
+    color:#000000 !important;
+    text-decoration: none !important;
+    border: hidden !important;
+    border-color: #000000 !important;
+    box-shadow: 0px !important;  
+}
+  
+.accordion-button:focus {
+    z-index: 3;
+    border-color: #FFF !important;
+    outline: 0;
+    box-shadow: 0 0 0 .15rem #FFF !important;
 }
 
 /* The side navigation menu */
@@ -78,3 +108,4 @@
       float: none;
     }
   }
+
