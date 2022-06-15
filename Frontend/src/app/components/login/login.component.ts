@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit {
       localStorage.setItem('currentUser', JSON.stringify(result));
 
 
-      this.router.navigate(['edit'])
+      this.router.navigate(['dashboard'])
       setTimeout(() => {
 
         window.location.reload()
