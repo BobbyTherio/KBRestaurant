@@ -8,7 +8,7 @@
 
     <div class="form-group"  >
         <label class="form-label">Food List</label>
-        <select class="form-select" formControlName="food_id" placeholder="foodList">
+        <select class="form-select" id="pick" formControlName="food_id" placeholder="foodList">
             <option value={{f.food_id}} *ngFor="let f of food"  >
                 {{f.name}}
                 
@@ -43,7 +43,9 @@
         <input matInput type="text" class="form-control" formControlName="ingredients" placeholder="Ingredients">
     </div>
 
-    <button type="submit" class="button" (click)="editFood()">Submit</button>
+    <a routerLink="/edit">
+        <button type="submit" class="button" (click)="editFood()">Submit</button>
+    </a>
 </form>
 
 
