@@ -1,6 +1,6 @@
 import { Component, Input, OnInit, Output,EventEmitter } from '@angular/core';
 import { KBFood } from 'src/app/interfaces/food';
-import { FoodService } from 'src/app/services/food.service';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-appetizers',
@@ -11,14 +11,18 @@ export class AppetizersComponent implements OnInit {
   
   @Input() appetizers!: KBFood;  
   food!:any;
+  test:any;
   
 
-  constructor()
+  constructor(
+    private service:UserService,
+  )
    {
 
    }
 
   ngOnInit(): void {
+    this.test = this.service.isAuthenticated()
     // this.foodService.getFood().subscribe((results) => {
     //   this.food = results;      
     // }, (err) => {

@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { KBFood } from 'src/app/interfaces/food';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-desserts',
@@ -9,10 +10,15 @@ import { KBFood } from 'src/app/interfaces/food';
 export class DessertsComponent implements OnInit {
 
   @Input() desserts!: KBFood;
+  test:any;
+  constructor(
+    private service:UserService,
+  ) { 
 
-  constructor() { }
+  }
 
   ngOnInit(): void {
+    this.test = this.service.isAuthenticated()
   }
 
 }
