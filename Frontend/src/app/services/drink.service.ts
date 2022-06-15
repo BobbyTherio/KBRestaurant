@@ -21,6 +21,10 @@ export class DrinkService {
     return this.httpClient.patch('http://localhost:3000/drink'+ id, formDrink);
   }
 
+  getDrinkID(id:any){
+    return this.httpClient.get(`http://localhost:3000/drink/${id}`)
+  }
+
   deleteDrink(id:any) {
     return this.httpClient.delete(`http://localhost:3000/drink/${id}`);
   }

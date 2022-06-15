@@ -7,41 +7,52 @@
 </div>
 
 <!-- Page content -->
+<div class="container">
+  <div class="row">
 
-
-<div class="content">
-  <div id="title">Appetizers</div>
-  <div class="DashboardAppetizersAny">
-    <div class="" *ngFor="let f of food">
-      <app-dashboard-appetizer [dashboardappetizers]="f"></app-dashboard-appetizer>
+    <div class="col">
+      <div id="card">
+        <div id="title" class="DashboardAppetizersAny">Appetizers</div>
+        <div>
+          <div *ngFor="let f of food">
+            <app-dashboard-appetizer [dashboardappetizers]="f"></app-dashboard-appetizer>
+          </div>
+        </div>
+      </div>
     </div>
+    
+    <div class="col">
+      <div id="card">
+        <div id="title" class="DashboardMainsAny">Mains</div>
+        <div>
+          <div *ngFor="let f of food">
+            <app-dashboard-mains [dashboardmains]="f"></app-dashboard-mains>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div id="card">
+        <div id="title" class="DashboardBreakfastsAny">Breakfasts</div>
+        <div>
+          <div *ngFor="let f of food">
+            <app-dashboard-breakfasts [dashboardbreakfasts]="f"></app-dashboard-breakfasts>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div id="card">
+        <div id="title" class="DashboardDessertsAny">Desserts</div>
+        <div>
+          <div *ngFor="let f of food">
+            <app-dashboard-desserts [dashboarddesserts]="f"></app-dashboard-desserts>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </div>
-
-<div class="content">
-  <div id="title">Mains</div>
-  <div class="DashboardMainsAny">
-    <div class="" *ngFor="let f of food">
-      <app-dashboard-mains [dashboardmains]="f"></app-dashboard-mains>
-    </div>
-  </div>
-</div>
-
-<div class="content">
-  <div id="title">Breakfasts</div>
-  <div class="DashboardBreakfastsAny">
-    <div class="" *ngFor="let f of food">
-      <app-dashboard-breakfasts [dashboardbreakfasts]="f"></app-dashboard-breakfasts>
-    </div>
-  </div>
-</div>
-
-<div class="content">
-  <div id="title">Desserts</div>
-  <div class="DashboardDessertsAny">
-    <div class="" *ngFor="let f of food">
-      <app-dashboard-desserts [dashboarddesserts]="f"></app-dashboard-desserts>
-    </div>
-  </div>
-</div>
-

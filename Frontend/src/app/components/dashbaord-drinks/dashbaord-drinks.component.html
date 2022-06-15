@@ -7,7 +7,41 @@
 </div>
 
 <!-- Page content -->
-<div class="content">
-    <p>Dashboard-drinks works</p>
-</div>
+<div class="container">
+    <div class="row">
+  
+      <div class="col">
+        <div id="card">
+          <div id="title" class="DashboardBeersAny">Beers</div>
+          <div>
+            <div *ngFor="let d of drink">
+              <app-dashboard-beers [dashboardbeers]="d"></app-dashboard-beers>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+       <div class="col">
+        <div id="card">
+          <div id="title" class="DashboardWinesAny">Wines</div>
+          <div>
+            <div *ngFor="let d of drink">
+              <app-dashboard-wines [dashboardwines]="d"></app-dashboard-wines>
+            </div>
+          </div>
+        </div>
+      </div>
 
+      <div class="col">
+        <div id="card">
+          <div id="title" class="DashboardCocktailsAny">Cocktails</div>
+          <div>
+            <div *ngFor="let d of drink">
+              <app-dashboard-cocktails [dashboardcocktails]="d"></app-dashboard-cocktails>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  </div>

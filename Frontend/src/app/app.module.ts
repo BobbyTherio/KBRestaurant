@@ -45,6 +45,10 @@ import { DashboardMainsComponent } from './components/dashboard-mains/dashboard-
 import { DashboardAppetizerComponent } from './components/dashboard-appetizer/dashboard-appetizer.component';
 import { DashboardBreakfastsComponent } from './components/dashboard-breakfasts/dashboard-breakfasts.component';
 import { DashboardDessertsComponent } from './components/dashboard-desserts/dashboard-desserts.component';
+import { DashboardBeersComponent } from './components/dashboard-beers/dashboard-beers.component';
+import { DashboardCocktailsComponent } from './components/dashboard-cocktails/dashboard-cocktails.component';
+import { DashboardWinesComponent } from './components/dashboard-wines/dashboard-wines.component';
+import { DashboardOfferComponent } from './components/dashboard-offer/dashboard-offer.component';
 
 @NgModule({
   declarations: [
@@ -83,6 +87,10 @@ import { DashboardDessertsComponent } from './components/dashboard-desserts/dash
     DashboardAppetizerComponent,
     DashboardBreakfastsComponent,
     DashboardDessertsComponent,
+    DashboardBeersComponent,
+    DashboardCocktailsComponent,
+    DashboardWinesComponent,
+    DashboardOfferComponent,
   ],
   imports: [
     BrowserModule,

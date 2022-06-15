@@ -7,6 +7,18 @@
 </div>
 
 <!-- Page content -->
-<div class="content">
-    <p>Dashboard-offers works</p>
+<div class="container">
+    <div class="row">
+  
+      <div class="col">
+        <div id="card">
+          <div id="title" class="DashboardOfferAny">Offers</div>
+          <div>
+            <div *ngFor="let o of offer">
+              <app-dashboard-offer [dashboardoffer]="o"></app-dashboard-offer>
+            </div>
+          </div>
+        </div>
+        </div>
+    </div>
 </div>

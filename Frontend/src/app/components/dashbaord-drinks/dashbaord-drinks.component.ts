@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { KBDrink } from 'src/app/interfaces/drink';
+import { DrinkService } from 'src/app/services/drink.service';
 
 @Component({
   selector: 'app-dashbaord-drinks',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashbaordDrinksComponent implements OnInit {
 
-  constructor() { }
+  drink!: KBDrink[];
+
+  constructor(private drinkService: DrinkService) {
+    drinkService.getDrinks().subscribe((results) => {
+      this.drink = results;
+    }, (err) => {
+      console.log(err);
+    });
+   }
 
   ngOnInit(): void {
   }
-
 }

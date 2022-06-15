@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { KBOffer } from 'src/app/interfaces/offer';
+import { OfferService } from 'src/app/services/offer.service';
 
 @Component({
   selector: 'app-dashbaord-offers',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashbaordOffersComponent implements OnInit {
 
-  constructor() { }
+  offer!: KBOffer[];
+
+  constructor(private OfferService: OfferService) { 
+    OfferService.getOffers().subscribe((results) => {
+      this.offer = results;
+    }, (err) => {
+      console.log(err);
+    });
+  }
 
   ngOnInit(): void {
   }
-
 }

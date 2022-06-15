@@ -17,5 +17,4 @@ export class DashboardAppetizerComponent implements OnInit {
   ngOnInit(): void {
     this.DashboardAppetizersAny = this.dashboardAppetizersService.isAuthenticated()
   }
-
 }
