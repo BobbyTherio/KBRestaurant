@@ -1,4 +1,4 @@
-<h1 class="success">Register</h1>
+<h1 class="success">New User</h1>
 <form [formGroup]="registerForm">
 
     <div class="form-group">
@@ -17,5 +17,5 @@
         <input matInput type="password" class="form-control" formControlName="password" placeholder="Password">
     </div>
 
-    <button type="submit" class="button" (click)="register()">Submit</button>
+    <button type="button" class="button" (click)="register()" routerLink="/dashboard">Submit</button>
 </form>

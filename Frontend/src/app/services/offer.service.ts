@@ -14,11 +14,11 @@ export class OfferService {
   }
 
   newOffer(formOffer:any) {
-    return this.httpClient.post('http://localhost:3000/add-offer', formOffer);
+    return this.httpClient.post('http://localhost:3000/promo', formOffer);
   }
 
   updateOffer(id:any, formOffer:any) {
-    return this.httpClient.patch('http://localhost:3000/promo'+ id, formOffer);
+    return this.httpClient.patch(`http://localhost:3000/promo/`+id, formOffer);
   }
 
   deleteOffer(id:any) {

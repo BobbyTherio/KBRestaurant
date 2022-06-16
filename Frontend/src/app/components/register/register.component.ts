@@ -27,6 +27,8 @@ export class RegisterComponent implements OnInit {
     let formData = this.registerForm.value;
     this.service.register(formData).subscribe((result) => {
       alert('Register successful!');
+      this.registerForm.reset();
+      window.location.reload();
     }, (err) => {
       alert('Register failed!');
       console.log(err);

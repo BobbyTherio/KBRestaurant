@@ -143,8 +143,8 @@ app.get('/food', function (req, res) {
         res.status(500).send(err);
     });
 });
-// GET : Food by id
 
+// GET : Food by id
 app.get('/food/:id/',
 function(req, res){
     let id = req.params.id;
@@ -209,7 +209,6 @@ app.patch('/food/:food_id', function (req, res) {
             }
             if (req.body.price === "") {
                 result.price = Number(result.price)
-
             } else {
                 result.price = req.body.price;
             }
@@ -226,7 +225,6 @@ app.patch('/food/:food_id', function (req, res) {
             //Save changes to DB
             result.save().then(function () {
                 res.send(result)
-
             }).catch(function (err) {
                 res.status(500).send(err);
             });
@@ -254,7 +252,6 @@ app.get('/drink', function (req, res) {
 });
 
 // GET : Drink by id
-
 app.get('/drink/:id/',
 function(req, res){
     let id = req.params.id;
@@ -350,6 +347,7 @@ app.get('/promo', function (req, res) {
     });
 });
 
+// GET : Promo by id
 app.get('/promo/:id/',
 function(req, res){
     let id = req.params.id;
@@ -359,8 +357,9 @@ function(req, res){
       res.status(500).send(err);
     });
   });
+
 // POST : Add a new promo
-app.post('/add-offer', function (req, res) {
+app.post('/promo', function (req, res) {
     Promo.create(req.body).then(function (result) {
         res.redirect('/promo');
     }).catch(function (err) {
@@ -398,32 +397,32 @@ app.patch('/promo/:promo_id', function (req, res) {
         //Check if promo was found
         if (result) {
             //Update promo
-            if (req.body.name === undefined) {
+            if (req.body.name === "") {
                 result.name = result.name
             } else {
                 result.name = req.body.name;
             }
-            if (req.body.description === undefined) {
+            if (req.body.description === "") {
                 result.description = result.description
             } else {
                 result.description = req.body.description;
             }
-            if (req.body.price === undefined) {
-                result.price = result.price
+            if (req.body.price === "") {
+                result.price = Number(result.price)
             } else {
                 result.price = req.body.price;
             }
-            if (req.body.start_date === undefined) {
+            if (req.body.start_date === "") {
                 result.start_date = result.start_date
             } else {
                 result.start_date = req.body.start_date;
             }
-            if (req.body.end_date === undefined) {
+            if (req.body.end_date === "") {
                 result.end_date = result.end_date
             } else {
                 result.end_date = req.body.end_date;
             }
-            if (req.body.date === undefined) {
+            if (req.body.date === "") {
                 result.date = result.date
             } else {
                 result.date = req.body.date;

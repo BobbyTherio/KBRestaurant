@@ -19,7 +19,7 @@ export class EditDrinkComponent implements OnInit {
 
   constructor (
     private fb: FormBuilder,
-    private activatedRoute:ActivatedRoute,
+    private activatedRoute: ActivatedRoute,
     private editDrinkService: DrinkService,
     private drinkService: DrinkService,)
 
