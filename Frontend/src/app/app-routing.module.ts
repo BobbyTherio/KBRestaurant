@@ -42,7 +42,7 @@ const routes: Routes = [
   {path: 'edit-offer', component: EditOfferComponent, canActivate: [AuthguardService]},
   {path: 'food/:id', component: EditFoodComponent, canActivate: [AuthguardService]},
   {path: 'drink/:id', component: EditDrinkComponent, canActivate: [AuthguardService]},
-  {path: 'offer/:id', component: EditOfferComponent, canActivate: [AuthguardService]},
+  {path: 'promo/:id', component: EditOfferComponent, canActivate: [AuthguardService]},
 ];
 
 @NgModule({
