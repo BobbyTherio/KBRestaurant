@@ -17,8 +17,7 @@ form {
   text-align: center;
   margin: 20px auto;
   
-input, textarea, button {
-    border:0; outline:0;
+input, textarea, button {    
     padding: 1em;
     display: block;
     width: 100%;
@@ -77,6 +76,11 @@ textarea {
   }
 }
 
+@media screen and (max-width: 400px) {
+
+}
+
+
 /* Clearfix */
 .cf:before,
 .cf:after {
@@ -93,3 +97,8 @@ textarea {
   color: white;
 }
 
+@media screen and (max-width: 400px) {
+  form{
+    width: 200px;
+  }
+}

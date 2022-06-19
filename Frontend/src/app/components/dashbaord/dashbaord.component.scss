@@ -10,8 +10,8 @@ h1{
 .accordion {
   margin-top: 50px;
   text-align: center;
-  position: relative;
-  left: 33%;
+  margin-left: auto;
+  margin-right: auto;  
   width: 35%;
 }
 
@@ -99,5 +99,19 @@ h1{
       float: none;
     }
 
+    .accordion{
+      width: 100%;
+      margin:40px auto;
+      
+    }
+    
    
+  }
+
+  @media screen and (min-width:400px) and (max-width: 1000px) {
+    .accordion{
+      width: 90%;
+      margin:40px auto;
+      
+    }
   }
