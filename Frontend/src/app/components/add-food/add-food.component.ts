@@ -30,8 +30,12 @@ export class AddFoodComponent implements OnInit {
     this.addFoodService.newFood(this.addFoodForm.value).subscribe(() => {
       // alert(`${this.name?.value} has been added successfully`);
       this.addFoodForm.reset();
-      this.route.navigate(['/dashboard-food'])
-      // window.location.reload();
+      setTimeout(() => {
+        
+        this.route.navigate(['/dashboard-food'])
+        
+      }, 10 )
+      
     });
   }
 
