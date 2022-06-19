@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { OfferService } from 'src/app/services/offer.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-offer',
@@ -11,7 +12,7 @@ export class AddOfferComponent implements OnInit {
 
   addOfferForm!: FormGroup;
 
-  constructor(private fb: FormBuilder, private addOfferService: OfferService) {
+  constructor(private fb: FormBuilder, private addOfferService: OfferService,private route:Router) {
     this.addOfferForm = this.fb.group({
       name: ["", [Validators.required]],
       description: ["",[Validators.required]],
@@ -28,9 +29,14 @@ export class AddOfferComponent implements OnInit {
   addNewOffer(){
     console.log(this.addOfferForm.value);
     this.addOfferService.newOffer(this.addOfferForm.value).subscribe(() => {
-      alert(`${this.name?.value} has been added successfully`);
+      // alert(`${this.name?.value} has been added successfully`);
       this.addOfferForm.reset();
-      window.location.reload();
+      setTimeout(() => {
+        
+        this.route.navigate(['/dashboard-offers'])
+        
+      }, 10 )
+      
     });
   }
 

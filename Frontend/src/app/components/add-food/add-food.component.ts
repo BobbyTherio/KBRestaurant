@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { FoodService } from 'src/app/services/food.service';
 
 @Component({
@@ -11,7 +12,7 @@ export class AddFoodComponent implements OnInit {
 
   addFoodForm!: FormGroup;
 
-  constructor(private fb: FormBuilder, private addFoodService: FoodService) {
+  constructor(private fb: FormBuilder, private addFoodService: FoodService,private route:Router) {
     this.addFoodForm = this.fb.group({
       name: ["", [Validators.required]],
       description: ["",[Validators.required]],
@@ -27,9 +28,10 @@ export class AddFoodComponent implements OnInit {
   addNewFood(){
     console.log(this.addFoodForm.value);
     this.addFoodService.newFood(this.addFoodForm.value).subscribe(() => {
-      alert(`${this.name?.value} has been added successfully`);
+      // alert(`${this.name?.value} has been added successfully`);
       this.addFoodForm.reset();
-      window.location.reload();
+      this.route.navigate(['/dashboard-food'])
+      // window.location.reload();
     });
   }
 
