@@ -1,27 +1,22 @@
 .header {
     text-align: center;
     color: rgb(41, 41, 41);
-    padding: 40px;
+    padding: 2.5rem;
 }
 
 hr {
     position: relative;
     border: none;
-    height: 12px;
+    height: 0.75rem;
     background: rgb(0, 0, 0);
-    margin-bottom: 50px;
+    margin-bottom: 3.125rem;
 }
 
 #card {
-    position: relative;
-    // width: 613px;
-    // height: 762px;
-    // left: 330px;
-    // top: 775px;
-    margin-top: 30px;
+    margin-top: 1.875rem;
     background: #FFFFFF;
-    border: 2px solid #000000;
-    border-radius: 19px;
+    border: 0.125rem solid #000000;
+    border-radius:1.188rem;
     width: 40rem;
 }
 
@@ -29,9 +24,26 @@ hr {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
-    font-size: 40px;
-    line-height: 60px;
+    font-size: 3.063rem;
+    line-height: 3.75rem;
     text-align: center;
     color: #000000;
-    margin-bottom: 25px;
+    margin-bottom: 1.563rem;
+}
+
+@media only screen and (max-width:700px) {
+    #card{
+        width: 25rem;
+    }
+}
+
+@media only screen and (max-width:500px) {
+    #card{
+        width: 18.75rem;
+    }
+}
+@media only screen and (max-width:358px) {
+    #card{
+        width: 15.625rem;
+    }
 }
