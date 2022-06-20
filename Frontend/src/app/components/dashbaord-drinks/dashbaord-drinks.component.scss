@@ -120,4 +120,30 @@
       text-align: center;
       float: none;
     }
+
+   
   }
+  @media screen and (min-width:820px) and (max-width:940px){
+    #test{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .test12{
+      width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+}
+  @media screen and (min-width:700px) and (max-width:819px){
+    #test{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .test12{
+      width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+}

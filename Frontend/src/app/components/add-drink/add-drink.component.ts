@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { DrinkService } from 'src/app/services/drink.service';
 
 @Component({
@@ -11,7 +12,7 @@ export class AddDrinkComponent implements OnInit {
 
   addDrinkForm!: FormGroup;
 
-  constructor(private fb: FormBuilder, private addDrinkService: DrinkService) {
+  constructor(private fb: FormBuilder, private addDrinkService: DrinkService, private route:Router) {
     this.addDrinkForm = this.fb.group({
       name: ["", [Validators.required]],
       description: ["",[Validators.required]],
@@ -26,9 +27,16 @@ export class AddDrinkComponent implements OnInit {
   addNewDrink(){
     console.log(this.addDrinkForm.value);
     this.addDrinkService.newDrink(this.addDrinkForm.value).subscribe(() => {
-      alert(`${this.name?.value} has been added successfully`);
+      // alert(`${this.name?.value} has been added successfully`);
       this.addDrinkForm.reset();
-      window.location.reload();
+      setTimeout(() => {
+        
+        this.route.navigate(['/dashboard-drinks'])
+        
+      }, 10 )
+      
+      
+      
     });
   }
 

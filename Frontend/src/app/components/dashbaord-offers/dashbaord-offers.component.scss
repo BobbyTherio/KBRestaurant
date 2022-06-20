@@ -119,3 +119,29 @@
       float: none;
     }
   }
+
+  
+  @media screen and (min-width:820px) and (max-width:1550px){
+    #test{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .test12{
+      width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+}
+  @media screen and (min-width:720px) and (max-width:900px){
+    #test{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .test12{
+      width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+}

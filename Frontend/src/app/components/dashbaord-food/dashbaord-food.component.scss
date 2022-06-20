@@ -122,3 +122,28 @@
     }
   }
 
+  @media screen and (min-width:820px) and (max-width:1350px){
+      #test{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .test12{
+        width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+  }
+  @media screen and (min-width:1351px) and (max-width:1400px){
+      #test{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .test12{
+        width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+  }
+
