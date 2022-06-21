@@ -17,8 +17,8 @@ form {
   text-align: center;
   margin: 20px auto;
   
-input, textarea, button {
-    
+  input, textarea, button {
+    border:0; outline:0;
     padding: 1em;
     display: block;
     width: 100%;
