@@ -17,16 +17,18 @@ form {
   text-align: center;
   margin: 20px auto;
   
-input, textarea, button {
-  border:0; outline:0;
-  padding: 1em;
-  display: block;
-  width: 100%;
-  margin-top: 1em;
-  font-family: "Poppins", Arial, Helvetica, sans-serif;
-  resize: none;
-&:focus {
-  box-shadow: 5px 5px 5px #2ec4b575;
+  input, textarea, button {
+    border:0; 
+    outline:0;
+    padding: 1em;
+    display: block;
+    width: 100%;
+    margin-top: 1em;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    resize: none;
+  &:focus {
+    box-shadow: 5px 5px 5px #2ec4b575;
+
   }
 }
 
